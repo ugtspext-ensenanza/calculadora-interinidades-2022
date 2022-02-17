@@ -55,7 +55,7 @@ body {
 		margin-right: -10px!important;
 		border-top: 1px solid #851123!important;
 		border-bottom: 1px solid #851123!important;
-		font-size: 1.2em;
+		font-size: 1.2em!important;
 	}
 	#puntuaciontotal input[type=text], h2 span.numseccion {
 		color: #851123!important;
