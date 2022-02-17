@@ -1,946 +1,419 @@
 <!DOCTYPE html>
 <html lang="es">
-
-<head>
-    <title>Calculadora Baremo Oposiciones Docentes Extremadura 2022 - UGT SP Extremadura
-        Enseñanza</title>
-    <meta charset="utf-8" />
-    <link rel="icon" href="https://extremadura.fespugt.es/images/IMAGEN/FOTOS/ENSENANZA/favicon.png" type="image/png">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-    <link rel="stylesheet" href="style.css">
-    <script src="script.js"></script>
-</head>
-
-<body>
-    <div id="contenedor">
-        <div id="papel">
-            <img id="logo" src="https://extremadura.fespugt.es/images/IMAGEN/FOTOS/ENSENANZA/logo-ugtsp-invert.png"
-                alt="UGT SP Extremadura Enseñanza">
-            <p><span style="font-size:0.8em;">Oposiciones Docentes Extremadura 2022</span></br><strong>Calculadora
-                    de Baremo del Concurso</strong></p>
-            <img id="imgpapel" src="https://extremadura.fespugt.es/images/IMAGEN/FOTOS/ENSENANZA/papel-rasgado.png">
-        </div>
-        <div id="papelprnt">
-            <img id="logo" src="https://extremadura.fespugt.es/images/IMAGEN/FOTOS/ENSENANZA/logo-fesp.png"
-                alt="FeSP-UGT Extremadura Enseñanza">
-            <p><span style="font-size:0.8em;">Oposiciones Docentes Extremadura 2022</span></br><strong>Calculadora
-                    de Baremo del Concurso</strong></p>
-        </div>
-        <div id="calculadora">
-    <p>&nbsp;</p>
-      <p id="enlaceconv" style="font-size: small; font-weight: bold; font-variant: small-caps; color: #ffffff; background-color: #999999; text-align: center; padding: 20px;"><a href="http://doe.gobex.es/pdfs/doe/2019/850o/19040053.pdf" style="color: #ffffff; font-size: 1.2em; display:block;" target="_blank">Decreto 51/2019, de 30 de abril, por el que se regula la provisión interina de puestos de trabajo de personal docente no universitario de la Comunidad Autónoma de Extremadura</a><br>[&nbsp;<a href="http://doe.gobex.es/pdfs/doe/2020/370o/20040011.pdf" style="color: #ddd;" target="_blank"><em>Corrección de errores publicada el 24 de febrero de 2020</em></a>&nbsp;]</p>
-      <p style="text-align: center; font-weight: bold;"><a href="https://drive.google.com/file/d/1FeFpLv7bEKwOM5qTk2xVhfFDSZc4xDxi/view?usp=sharing" target="_blank">Descarga aquí nuestra tabla resumen del baremo de méritos de interinos.</a></p>
-      <div id="calcubaremo">
-      <p>&nbsp;</p>
-      <p style="text-align: center; font-weight: bold;">Las personas aspirantes no podrán alcanzar más de 10 puntos por la valoración de sus méritos.</p>
-        <div class="seccion">
-          <h2><span class="totalsec"><input class="maxsec" type="text" name="maxsec1" value="[Máx]" readonly="readonly" size="4"><input class="inputtotalsec" type="text" name="totalsec1" value="0" readonly="readonly" size="4"> puntos</span><span class="numseccion">1.</span> Experiencia docente <span class="txtmax">[Máx: 4,750 ptos]</span></h2>
-          <p class="pregunta"><span class="opcionesradio"><input class="optsino" type="radio" name="opti110" value="1"> Sí<input class="optsino" type="radio" name="opti110" value="0" checked="checked"> No</span><span class="numseccion">1.1.</span> ¿Experiencia docente en centros públicos, en la misma especialidad y nivel educativo?</p>
-          <div class="subseccion oculto">
-            <table border="0">
-              <tbody>
-                <tr>
-                  <td>Indica tu tiempo de experiencia docente, del mismo nivel educativo y de la misma especialidad a la que optas, en centros educativos públicos:</td>
-                  <td class="celdapunt" style="width: 150px; padding: 10px;" rowspan="2" align="right"><em class="txtmax2">[Máx: 4,750 ptos]</em><br>Puntos 1.1: <input type="text" name="result110" value="0" readonly="readonly" size="4"></td>
-                </tr>
-                <tr>
-                  <td style="padding: 10px;">Meses: <input class="intronum" type="text" name="data110x" value="0" size="3" maxlength="3">&nbsp;&nbsp;&nbsp;&nbsp;Días: <input class="intronum dias" type="text" name="data110y" value="0" size="3" maxlength="2"></td>
-                </tr>
-              </tbody>
-            </table>
-            <div class="enlacesinfo">
-              <a class="toggleinfo" rel="doe">Más información</a>
-              <div class="info infodoe">
-                <p>1.1. Por la experiencia docente del mismo nivel educativo y de la misma especialidad en centros educativos públicos hasta un máximo de 4,750 puntos: 0,0395 puntos por mes trabajado.</p>
-                <p>Los periodos inferiores a un mes se computarán con 0,0013 puntos por día trabajado.</p>
-                <p>Se entenderá por centros educativos públicos, los integrados en la red pública de centros creados y sostenidos por las Administraciones Educativas.</p>
-                <p>Únicamente se tendrá en cuenta la experiencia docente en las enseñanzas regladas correspondientes a los niveles educativos no universitarios previstas en la Ley Orgánica 2/2006, de 3 de mayo, de Educación.</p>
-              </div>
-            </div>
-          </div>
-          <p class="pregunta"><span class="opcionesradio"><input class="optsino" type="radio" name="opti120" value="1"> Sí<input class="optsino" type="radio" name="opti120" value="0" checked="checked"> No</span><span class="numseccion">1.2.</span> ¿Experiencia docente en centros públicos, en distinta especialidad o nivel educativo?</p>
-          <div class="subseccion oculto">
-            <table border="0">
-              <tbody>
-                <tr>
-                  <td>Indica tu tiempo de experiencia docente, de distinto nivel educativo o especialidad a la que optas, en centros educativos públicos:</td>
-                  <td class="celdapunt" style="width: 150px; padding: 10px;" rowspan="2" align="right"><em class="txtmax2">[Máx: 2,375 ptos]</em><br>Puntos 1.2: <input type="text" name="result120" value="0" readonly="readonly" size="4"></td>
-                </tr>
-                <tr>
-                  <td style="padding: 10px;">Meses: <input class="intronum" type="text" name="data120x" value="0" size="3" maxlength="3">&nbsp;&nbsp;&nbsp;&nbsp;Días: <input class="intronum dias" type="text" name="data120y" value="0" size="3" maxlength="2"></td>
-                </tr>
-              </tbody>
-            </table>
-            <div class="enlacesinfo">
-              <a class="toggleinfo" rel="doe">Más información</a>
-              <div class="info infodoe">
-                <p>1.2. Por la experiencia docente en otro nivel educativo u otra especialidad distinta a la que se opta, en centros educativos públicos, hasta un máximo de 2,375 puntos: 0,0197 puntos por mes trabajado.</p>
-                <p>Los periodos inferiores a un mes se computarán con 0,0006 puntos por día trabajado.</p>
-                <p>Se entenderá por centros educativos públicos, los integrados en la red pública de centros creados y sostenidos por las Administraciones Educativas.</p>
-                <p>Únicamente se tendrá en cuenta la experiencia docente en las enseñanzas regladas correspondientes a los niveles educativos no universitarios previstas en la Ley Orgánica 2/2006, de 3 de mayo, de Educación.</p>
-              </div>
-            </div>
-          </div>
-          <p class="pregunta"><span class="opcionesradio"><input class="optsino" type="radio" name="opti130" value="1"> Sí<input class="optsino" type="radio" name="opti130" value="0" checked="checked"> No</span><span class="numseccion">1.3.</span> ¿Experiencia docente en centros concertados, en la misma especialidad y nivel educativo?</p>
-          <div class="subseccion oculto">
-            <table border="0">
-              <tbody>
-                <tr>
-                  <td>Indica tu tiempo de experiencia docente, del mismo nivel educativo y de la misma especialidad a la que optas, en centros concertados:</td>
-                  <td class="celdapunt" style="width: 150px; padding: 10px;" rowspan="2" align="right"><em class="txtmax2">[Máx: 1,583 ptos]</em><br>Puntos 1.3: <input type="text" name="result130" value="0" readonly="readonly" size="4"></td>
-                </tr>
-                <tr>
-                  <td style="padding: 10px;">Meses: <input class="intronum" type="text" name="data130x" value="0" size="3" maxlength="3">&nbsp;&nbsp;&nbsp;&nbsp;Días: <input class="intronum dias" type="text" name="data130y" value="0" size="3" maxlength="2"></td>
-                </tr>
-              </tbody>
-            </table>
-            <div class="enlacesinfo">
-              <a class="toggleinfo" rel="doe">Más información</a>
-              <div class="info infodoe">
-                <p>1.3. Por la experiencia docente en centros concertados del mismo nivel educativo y de la misma especialidad por la que se opta hasta un máximo de 1,583 puntos: 0,0131 puntos por mes trabajado.</p>
-                <p>Los periodos inferiores a un mes se computarán con 0,0004 puntos por día trabajado.</p>
-                <p>Únicamente se tendrá en cuenta la experiencia docente en las enseñanzas regladas correspondientes a los niveles educativos no universitarios previstas en la Ley Orgánica 2/2006, de 3 de mayo, de Educación.</p>
-              </div>
-            </div>
-          </div>
-          <p class="pregunta"><span class="opcionesradio"><input class="optsino" type="radio" name="opti140" value="1"> Sí<input class="optsino" type="radio" name="opti140" value="0" checked="checked"> No</span><span class="numseccion">1.4.</span> ¿Otra experiencia docente?</p>
-          <div class="subseccion oculto">
-            <table border="0">
-              <tbody>
-                <tr>
-                  <td>Indica tu tiempo de experiencia docente en otras enseñanzas regladas de niveles no universitarios previstas en la LOE:</td>
-                  <td class="celdapunt" style="width: 150px; padding: 10px;" rowspan="2" align="right"><em class="txtmax2">[Máx: 0,7915 ptos]</em><br>Puntos 1.4: <input type="text" name="result140" value="0" readonly="readonly" size="4"></td>
-                </tr>
-                <tr>
-                  <td style="padding: 10px;">Meses: <input class="intronum" type="text" name="data140x" value="0" size="3" maxlength="3">&nbsp;&nbsp;&nbsp;&nbsp;Días: <input class="intronum dias" type="text" name="data140y" value="0" size="3" maxlength="2"></td>
-                </tr>
-              </tbody>
-            </table>
-            <div class="enlacesinfo">
-              <a class="toggleinfo" rel="doe">Más información</a>
-              <div class="info infodoe">
-                <p>1.4. Por la experiencia docente distinta de la recogida en los tres apartados anteriores hasta un máximo de 0,7915 puntos: 0,0065 puntos por mes trabajado.</p>
-                <p>Los periodos inferiores a un mes se computarán con 0,0002 puntos por día trabajado.</p>
-                <p>Únicamente se tendrá en cuenta la experiencia docente en las enseñanzas regladas correspondientes a los niveles educativos no universitarios previstas en la Ley Orgánica 2/2006, de 3 de mayo, de Educación.</p>
-              </div>
-            </div>
-          </div>
-          <div class="seccion">
-            <h2><span class="totalsec"><input class="maxsec" type="text" name="maxsec2" value="[Máx]" readonly="readonly" size="4"><input class="inputtotalsec" type="text" name="totalsec2" value="0" readonly="readonly" size="4"> puntos</span><span class="numseccion">2.</span> Resultados de oposición <span class="txtmax">[Máx: 3 ptos]</span></h2>
-            <p class="pregunta"><span class="opcionesradio"><input class="optsino" type="radio" name="opti200" value="1"> Sí<input class="optsino" type="radio" name="opti200" value="0" checked="checked"> No</span><span class="numseccion">2.</span> ¿Has participado en oposiciones a la misma especialidad?</p>
-            <div class="subseccion oculto">
-              <table border="0">
-                <tbody>
-                  <tr>
-                    <td>Indica la mejor nota media que hayas obtenido en oposiciones de la misma especialidad a la que optas, en Extremadura o en otras comunidades, así como el número de veces que has superado la fase de oposición:</td>
-                    <td class="celdapunt" style="width: 150px; padding: 10px;" rowspan="2" align="right"><em class="txtmax2">[Máx: 3 ptos]</em><br>Puntos 2: <input type="text" name="result200" value="0" readonly="readonly" size="4"></td>
-                  </tr>
-                  <tr>
-                    <td style="padding: 10px;">Mejor nota: <input class="intronum max10" type="text" style="margin-bottom:5px" name="data200x" value="0" size="7" maxlength="7"><br>Nº de aprobados: <input class="intronum" type="text" name="data200y" value="0" size="3" maxlength="1"></td>
-                  </tr>
-                </tbody>
-              </table>
-              <div class="enlacesinfo">
-                <a class="toggleinfo" rel="doe">Más información</a>
-                <div class="info infodoe">
-                  <p>2. Resultado de oposición. Hasta un máximo de 3 puntos.</p>
-                  <p>Se valorará el mejor resultado obtenido en la misma especialidad a la que se opta en los procesos selectivos convocados por la Comunidad Autónoma de Extremadura o por otras Administraciones Educativas, de conformidad con lo establecido en el artículo 4.1.</p>
-                  <p>La ponderación de la nota media se realizará mediante la siguiente fórmula:</p>
-                  <p>Nota media x 0,30 + 0,3 x número de veces que se ha superado la fase de oposición (máximo 0,9) de los procesos selectivos para ingreso en ese cuerpo y especialidad.</p>
-                  <p>La nota obtenida en la Comunidad Autónoma de Extremadura será incorporada de oficio debiendo la persona interesada acreditar en el proceso de adaptación de la puntuación previa al nuevo baremo el número de veces que se ha superado el proceso selectivo. En el caso de que la persona aspirante alegue el resultado de oposiciones convocadas por otras Administraciones Educativas, estará obligada a acreditar, en el plazo y forma que se establezca en la oportuna convocatoria, la puntuación obtenida y que cumple el requisito anteriormente indicado, así como el número de veces que ha superado las pruebas selectivas. Dicha nota se tendrá en cuenta en el siguiente curso escolar.</p>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="seccion">
-            <h2><span class="totalsec"><input class="maxsec" type="text" name="maxsec3" value="[Máx]" readonly="readonly" size="4"><input class="inputtotalsec" type="text" name="totalsec3" value="0" readonly="readonly" size="4"> puntos</span><span class="numseccion">3.</span> Otros méritos <span class="txtmax">[Máx: 2,250 ptos]</span></h2>
-            <p class="pregunta"><span class="opcionesradio"><input class="optsino" type="radio" name="opti310" value="1"> Sí<input class="optsino" type="radio" name="opti310" value="0" checked="checked"> No</span><span class="numseccion">3.1.</span> ¿Valorar el expediente académico?</p>
-            <div class="subseccion oculto">
-              <table border="0">
-                <tbody>
-                  <tr>
-                    <td>Introduce aquí la nota media de tu expediente académico en los estudios que presentas como requisito de acceso:</td>
-                    <td class="celdapunt" style="width: 150px; padding: 10px;" rowspan="2" align="right"><em class="txtmax2">[Máx: 0,600 ptos]</em><br>Puntos 3.1: <input type="text" name="result310" value="0" readonly="readonly" size="4"></td>
-                  </tr>
-                  <tr>
-                    <td style="padding: 10px;">Nota media: <input class="intronum max10" type="text" name="data310x" value="0" size="7" maxlength="7"></td>
-                  </tr>
-                </tbody>
-              </table>
-              <div class="enlacesinfo">
-                <a class="toggleinfo" rel="doe">Más información</a>
-                <div class="info infodoe">
-                  <p>3.1. Expediente académico: Hasta un máximo de 0,60 puntos, de acuerdo con la siguiente fórmula (Nota media - 5) x 0,12.</p>
-                </div>
-              </div>
-            </div>
-            <p class="pregunta"><span class="opcionesradio"><input class="optsino" type="radio" name="opti320" value="1"> Sí<input class="optsino" type="radio" name="opti320" value="0" checked="checked"> No</span><span class="numseccion">3.2.</span> ¿Valorar otras titulaciones?</p>
-            <div class="subseccion oculto">
-              <table border="0">
-                <tbody>
-                  <tr>
-                    <td>Señala en este apartado otras titulaciones distintas de las requeridas para el acceso a la especialidad que solicitas:</td>
-                    <td class="celdapunt" style="width: 150px; padding: 10px;" rowspan="2" align="right"><em class="txtmax2">[Máx: 0,750 ptos]</em><br>Puntos 3.2: <input type="text" name="result320" value="0" readonly="readonly" size="4"></td>
-                  </tr>
-                  <tr>
-                    <td style="padding: 10px;">
-                      <p><strong>Doctorado y premios extraordinarios:</strong></p>
-                      <table class="tablaespaciada" style="width: 100%; border: 0">
-                        <tbody>
-                          <tr>
-                            <td>¿Posees el Certificado de Estudios Avanzados, Suficiencia investigadora o equivalente?</td>
-                            <td style="white-space:nowrap"><input type="radio" name="data320a" value="1"> Sí<input class="optsino" type="radio" name="data320a" value="0" checked="checked"> No</td>
-                          </tr>
-                          <tr>
-                            <td>¿Tienes el título de Doctor?</td>
-                            <td style="white-space:nowrap"><input type="radio" name="data320b" value="1"> Sí<input class="optsino" type="radio" name="data320b" value="0" checked="checked"> No</td>
-                          </tr>
-                          <tr>
-                            <td>¿Has obtenido el premio extraordinario de doctorado?</td>
-                            <td style="white-space:nowrap"><input type="radio" name="data320c" value="1"> Sí<input class="optsino" type="radio" name="data320c" value="0" checked="checked"> No</td>
-                          </tr>
-                        </tbody>
-                      </table>
-                      <p><strong>Otras titulaciones universitarias:</strong></p>
-                      <p>Indica aquí otras titulaciones universitarias de carácter oficial distintas de las requeridas para el acceso a la especialidad que solicitas:</p>
-                      <table class="tablaespaciada" style="width: 100%; border: 0;">
-                        <tbody>
-                          <tr>
-                            <td>Títulos de primer ciclo (Diplomaturas, Ingeniería o Arquitectura Técnica o equivalentes, o estudios conducentes al primer ciclo de Licenciatura, Arquitectura o Ingeniería):</td>
-                            <td><input class="intronum" type="text" name="data320d" value="0" size="3" maxlength="1"></td>
-                          </tr>
-                          <tr>
-                            <td>Títulos de segundo ciclo (estudios correspondientes al segundo ciclo de Licenciaturas, Ingenierías, Arquitectura o equivalentes):</td>
-                            <td><input class="intronum" type="text" name="data320e" value="0" size="3" maxlength="1"></td>
-                          </tr>
-                          <tr>
-                            <td>Títulos de Grado:</td>
-                            <td><input class="intronum" type="text" name="data320f" value="0" size="3" maxlength="1"></td>
-                          </tr>
-                          <tr>
-                            <td>Títulos oficiales de Máster:</td>
-                            <td><input class="intronum" type="text" name="data320g" value="0" size="3" maxlength="1"></td>
-                          </tr>
-                        </tbody>
-                      </table>
-                      <p><strong>Otras enseñanzas:</strong></p>
-                      <table class="tablaespaciada" style="width: 100%; border: 0;">
-                        <tbody>
-                          <tr>
-                            <td>Certificados de idiomas nivel C2:</td>
-                            <td><input class="intronum" type="text" name="data320h" value="0" size="3" maxlength="1"></td>
-                          </tr>
-                          <tr>
-                            <td>Certificados de idiomas nivel C1:</td>
-                            <td><input class="intronum" type="text" name="data320i" value="0" size="3" maxlength="1"></td>
-                          </tr>
-                          <tr>
-                            <td>Certificados de idiomas nivel B2:</td>
-                            <td><input class="intronum" type="text" name="data320j" value="0" size="3" maxlength="1"></td>
-                          </tr>
-                          <tr>
-                            <td>Certificados de idiomas nivel B1:</td>
-                            <td><input class="intronum" type="text" name="data320k" value="0" size="3" maxlength="1"></td>
-                          </tr>
-                          <tr>
-                            <td>Títulos de Técnico Superior de Formación Profesional o de Artes Plásticas y Diseño, de Técnico Deportivo Superior o Títulos Profesionales de Música o Danza, o equivalentes:</td>
-                            <td><input class="intronum" type="text" name="data320l" value="0" size="3" maxlength="1"></td>
-                          </tr>
-                        </tbody>
-                      </table>
-                    </td>
-                  </tr>
-                </tbody>
-              </table>
-              <div class="enlacesinfo">
-                <a class="toggleinfo" rel="doe">Más información</a>
-                <div class="info infodoe">
-                  <p>3.2. Otras titulaciones distintas de las requeridas para el acceso a la especialidad que se solicita, hasta un máximo de 0,750 puntos.</p>
-                  <p>3.2.1. Doctorado y premios extraordinarios.</p>
-                  <p style="padding-left: 30px;">a) Por el Certificado-Diploma acreditativo de Estudios Avanzados, Suficiencia investigadora o cualquier otro título equivalente, siempre que no sean requisito para el ingreso en la función pública docente: 0,375 puntos.</p>
-                  <p style="padding-left: 30px;">No se valora este mérito cuando haya sido alegado el título de Doctor.</p>
-                  <p style="padding-left: 30px;">b) Por poseer el título de doctor: 0,500 puntos.</p>
-                  <p style="padding-left: 30px;">c) Por haber obtenido premio extraordinario en el doctorado: 0,100 puntos.</p>
-                  <p>3.2.2. Otras titulaciones universitarias de carácter oficial:</p>
-                  <p style="padding-left: 30px;">a) Por cada Diplomatura, Ingeniería Técnica, Arquitectura Técnica o títulos declarados legalmente equivalentes y por los estudios conducentes al primer ciclo de una Licenciatura, Arquitectura o Ingeniería: 0,375 puntos.</p>
-                  <p style="padding-left: 30px;">b) Por los estudios correspondientes al segundo ciclo de Licenciaturas, Ingenierías, Arquitecturas o títulos declarados legalmente equivalentes: 0,375 puntos.</p>
-                  <p style="padding-left: 30px;">En el caso de titulaciones de primer ciclo, no se valorarán a los aspirantes a cuerpos docentes del grupo A2, en ningún caso, el primer título o estudios de esta naturaleza que presente el aspirante.</p>
-                  <p style="padding-left: 30px;">En el caso de las personas aspirantes a cuerpos docentes del grupo A1, tampoco se valorará el título o estudios de esta naturaleza que haya sido necesario superar para la obtención del título de Licenciado, Ingeniero o Arquitectura que presente como requisito específico.</p>
-                  <p style="padding-left: 30px;">c) Por cada título de Grado: 0,375 puntos.</p>
-                  <p style="padding-left: 30px;">d) Por cada título oficial de Máster: 0,375 puntos.</p>
-                  <p>3.2.3. Por titulaciones de otras enseñanzas.</p>
-                  <p style="padding-left: 30px;">a) Por cada certificado de nivel del Consejo de Europa de Escuelas Oficiales de Idiomas:</p>
-                  <p style="padding-left: 60px;">B1: 0,125 puntos.</p>
-                  <p style="padding-left: 60px;">B2: 0,250 puntos.</p>
-                  <p style="padding-left: 60px;">C1: 0,375 puntos.</p>
-                  <p style="padding-left: 60px;">C2: 0,500 puntos.</p>
-                  <p style="padding-left: 60px;">Cuando el participantes presente varios certificados del mismo idioma solo se tendrá en cuenta el de nivel superior que presente.</p>
-                  <p style="padding-left: 30px;">b) Por cada título profesional de Música o Danza: 0,125 puntos.</p>
-                  <p style="padding-left: 30px;">c) Por cada título de Técnico Superior en Artes Plásticas y Diseño: 0,125 puntos.</p>
-                  <p style="padding-left: 30px;">d) Por cada título de Técnico Superior de Formación Profesional o equivalente: 0,125 puntos.</p>
-                  <p style="padding-left: 30px;">e) Por cada título de Técnico Deportivo Superior: 0,125 puntos.</p>
-                </div>
-              </div>
-            </div>
-            <p class="pregunta"><span class="opcionesradio"><input class="optsino" type="radio" name="opti330" value="1"> Sí<input class="optsino" type="radio" name="opti330" value="0" checked="checked"> No</span><span class="numseccion">3.3.</span> ¿Valorar formación permanente?</p>
-            <div class="subseccion oculto">
-              <table border="0">
-                <tbody>
-                  <tr>
-                    <td>Indica el número total de créditos en cursos, seminarios, grupos de trabajo u otras actividades formativas homologadas que hayas realizado:</td>
-                    <td class="celdapunt" style="width: 150px; padding: 10px;" rowspan="3" align="right"><em class="txtmax2">[Máx: 1 pto]</em><br>Puntos 3.3: <input type="text" name="result330" value="0" readonly="readonly" size="4"></td>
-                  </tr>
-                  <tr>
-                    <td style="padding: 10px;">Créditos: <input class="intronum" type="text" name="data330x" value="0" size="5" maxlength="5"></td>
-                  </tr>
-                  <tr>
-                    <td style="padding: 10px;"><em><u>Atención:</u> puedes obtener, además, en este apartado, hasta un máximo de 0,4 puntos por publicaciones o películas de carácter didáctico y científico, a juicio de la Comisión de baremación, siempre con un máximo total de 1 punto.</em></td>
-                  </tr>
-                </tbody>
-              </table>
-              <div class="enlacesinfo">
-                <a class="toggleinfo" rel="doe">Más información</a>
-                <div class="info infodoe">
-                  <p>3.3. Formación permanente: Hasta un máximo de 1 punto.</p>
-                  <p>3.3.1. Por cursos, seminarios, grupos de trabajo u otras actividades de formación realizadas: 0,02 puntos por cada crédito.</p>
-                  <p>Se valorarán exclusivamente las actividades homologadas por una Administración Educativa y las de la Universidad.</p>
-                  <p>3.3.2. Por publicaciones o películas de carácter didáctico y científico: hasta un máximo de 0,4 puntos.</p>
-                  <p>Aquellas publicaciones que, estando obligadas a consignar el ISBN en virtud de lo dispuesto por el Decreto 2984/1972, de 2 de noviembre, modificado por el Real Decreto 2063/2008, de 12 de diciembre o, en su caso, ISSN o ISMN, carezcan de ellos, no serán valoradas. Tampoco se valorarán las publicaciones en las que la persona autora sea también editora de las mismas.</p>
-                  <p>La puntuación máxima se repartirá de la siguiente manera:<br>• Libro completo o publicación en vídeo o C.D. con autoría única: 0,2 puntos.<br>• Libro completo o publicación en vídeo o C.D. con coautoría se dividirá 0,2 puntos entre el número de personas participaron de la autoría, con un mínimo de 0,05 puntos.<br>• Artículos: 0,05 puntos con autoría única. Con coautoría se divide 0,05 puntos por el número de personas coautoras, con un mínimo de 0,02 puntos.</p>
-                </div>
-              </div>
-            </div>
-            <p class="pregunta"><span class="opcionesradio"><input class="optsino" type="radio" name="opti340" value="1"> Sí<input class="optsino" type="radio" name="opti340" value="0" checked="checked"> No</span><span class="numseccion">3.4.</span> ¿Valorar conocimiento de la realidad extremeña?</p>
-            <div class="subseccion oculto">
-              <table border="0">
-                <tbody>
-                  <tr>
-                    <td>Indica el tiempo de participación en acciones formativas relacionadas o desarrolladas en Extremadura, no alegadas en apartados anteriores:</td>
-                    <td class="celdapunt" style="width: 150px; padding: 10px;" rowspan="4" align="right"><em class="txtmax2">[Máx: 1 pto]</em><br>Puntos 3.4: <input type="text" name="result340" value="0" readonly="readonly" size="4"></td>
-                  </tr>
-                  <tr>
-                    <td style="padding: 10px;">Meses: <input class="intronum" type="text" name="data340a" value="0" size="3" maxlength="3">&nbsp;&nbsp;&nbsp;&nbsp;Días: <input class="intronum dias" type="text" name="data340b" value="0" size="3" maxlength="2"></td>
-                  </tr>
-                  <tr>
-                    <td>Indica el tiempo de desempeño de tutoría, coordinación de ciclo o nivel, coordinación TIC, jefatura de departamento u otros cargos en centros docentes públicos de Extremadura:</td>
-                  </tr>
-                  <tr>
-                    <td style="padding: 10px;">Meses: <input class="intronum" type="text" name="data340c" value="0" size="3" maxlength="3">&nbsp;&nbsp;&nbsp;&nbsp;Días: <input class="intronum dias" type="text" name="data340d" value="0" size="3" maxlength="2"></td>
-                  </tr>
-                </tbody>
-              </table>
-              <div class="enlacesinfo">
-                <a class="toggleinfo" rel="doe">Más información</a>
-                <div class="info infodoe">
-                  <p>3.4. Conocimiento de la realidad educativa extremeña: Hasta 1 punto.</p>
-                  <p>3.4.1. Por la participación en acciones formativas relacionadas con Extremadura, actuaciones educativas en esta comunidad o en planes formativos en Extremadura desarrollados por una Administración Educativa o la Universidad, distintos de la actividad lectiva ordinaria y de los méritos alegados en los apartados anteriores. Se valorará 0,090 por mes. Los periodos inferiores a un mes se computarán con 0,003 puntos por día.</p>
-                  <p>3.4.2. Desempeño de tutoría, coordinación de ciclo o nivel, coordinación TIC, jefatura de departamento o cualquier otro cargo en centros docentes públicos de Extremadura. Se valorará 0,02 por mes. Los periodos inferiores a un mes se computarán con 0,0006 puntos por día.</p>
-                </div>
-              </div>
-            </div>
-            <p class="pregunta"><span class="opcionesradio"><input class="optsino" type="radio" name="opti350" value="1"> Sí<input class="optsino" type="radio" name="opti350" value="0" checked="checked"> No</span><span class="numseccion">3.5.</span> ¿Has realizado funciones consideradas como de difícil desempeño?</p>
-            <div class="subseccion oculto">
-              <table border="0">
-                <tbody>
-                  <tr>
-                    <td>Indica el tiempo en que has prestado servicios en centros de atención educativa preferente o de difícil desempeño, o en plazas de carácter itinerante, que itineren o de difícil cobertura:</td>
-                    <td class="celdapunt" style="width: 150px; padding: 10px;" rowspan="2" align="right"><em class="txtmax2">[Máx: 0,750 ptos]</em><br>Puntos 3.5: <input type="text" name="result350" value="0" readonly="readonly" size="4"></td>
-                  </tr>
-                  <tr>
-                    <td style="padding: 10px;">Meses: <input class="intronum" type="text" name="data350x" value="0" size="3" maxlength="3">&nbsp;&nbsp;&nbsp;&nbsp;Días: <input class="intronum dias" type="text" name="data350y" value="0" size="3" maxlength="2"></td>
-                  </tr>
-                </tbody>
-              </table>
-              <div class="enlacesinfo">
-                <a class="toggleinfo" rel="doe">Más información</a>
-                <div class="info infodoe">
-                  <p>3.5. Realización de funciones consideradas como de difícil desempeño. Hasta un máximo de 0,750 puntos. Se valorará 0,0312 por mes. Los periodos inferiores a un mes se computarán con 0,001 puntos por día.</p>
-                  <p>Por tal se entiende los servicios prestados en:</p>
-                  <p style="padding-left: 30px;">— Centros de atención educativa preferente o de difícil desempeño.</p>
-                  <p style="padding-left: 30px;">— Plazas de carácter itinerante, que itineren o de difícil cobertura.</p>
-                </div>
-              </div>
-            </div>
-            <p class="pregunta"><span class="opcionesradio"><input class="optsino" type="radio" name="opti360" value="1"> Sí<input class="optsino" type="radio" name="opti360" value="0" checked="checked"> No</span><span class="numseccion">3.6.</span> ¿Has participado en proyectos de investigación e innovación educativa convocados por la Junta de Extremadura?</p>
-            <div class="subseccion oculto">
-              <table border="0">
-                <tbody>
-                  <tr>
-                    <td>Indica el tiempo en el que has participado, sin ser coordinador, en proyectos de investigación e innovación educativa convocados por la Consejería de Educación de la Junta de Extremadura:</td>
-                    <td class="celdapunt" style="width: 150px; padding: 10px;" rowspan="4" align="right"><em class="txtmax2">[Máx: 0.750 ptos]</em><br>Puntos 3.6: <input type="text" name="result360" value="0" readonly="readonly" size="4"></td>
-                  </tr>
-                  <tr>
-                    <td style="padding: 10px;">Meses: <input class="intronum" type="text" name="data360a" value="0" size="3" maxlength="3">&nbsp;&nbsp;&nbsp;&nbsp;Días: <input class="intronum dias" type="text" name="data360b" value="0" size="3" maxlength="2"></td>
-                  </tr>
-                  <tr>
-                    <td>Indica el tiempo en el que has actuado como coordinador de proyectos de investigación e innovación educativa convocados por la Consejería de Educación de la Junta de Extremadura:</td>
-                  </tr>
-                  <tr>
-                    <td style="padding: 10px;">Meses: <input class="intronum" type="text" name="data360c" value="0" size="3" maxlength="3">&nbsp;&nbsp;&nbsp;&nbsp;Días: <input class="intronum dias" type="text" name="data360d" value="0" size="3" maxlength="2"></td>
-                  </tr>
-                </tbody>
-              </table>
-              <div class="enlacesinfo">
-                <a class="toggleinfo" rel="doe">Más información</a>
-                <div class="info infodoe">
-                  <p>3.6. Por participación en proyectos de investigación e innovación educativa convocados por la Consejería con competencia en materia de educación de la Junta de Extremadura. Hasta un máximo de 0,750 puntos.</p>
-                  <p>3.6.1. Por cada participación: 0,0208 puntos por mes. Los periodos inferiores a un mes se computarán con 0,0007 puntos por día.</p>
-                  <p>3.6.2. Por la coordinación: 0,0417 puntos por mes. Los periodos inferiores a un mes se computarán con 0,0014 puntos por día.</p>
-                </div>
-              </div>
-            </div>
-            <p class="pregunta"><span class="opcionesradio"><input class="optsino optsinodirecto" type="radio" name="opti370" value="1"> Sí<input class="optsino optsinodirecto" type="radio" name="opti370" value="0" checked="checked"> No</span><span class="numseccion">3.7.</span> ¿Tienes la calificación de Deportista de Alto Nivel o de Alto Rendimiento?</p>
-            <div class="subseccion oculto">
-              <table border="0">
-                <tbody>
-                  <tr>
-                    <td>Marca «Sí» si tienes la calificación de “Deportista de Alto Nivel” o de “Deportista de Alto de Rendimiento” de acuerdo con la normativa estatal o autonómica.</td>
-                    <td class="celdapunt" style="width: 150px; padding: 10px;" rowspan="2" align="right">Puntos 3.7: <input type="text" name="result370" value="0" readonly="readonly" size="4"></td>
-                  </tr>
-                </tbody>
-              </table>
-              <div class="enlacesinfo">
-                <a class="toggleinfo" rel="doe">Más información</a>
-                <div class="info infodoe">
-                  <p>3.7. Por tener la calificación de “Deportista de Alto Nivel” o de “Deportista de Alto de Rendimiento” de acuerdo con la normativa estatal o autonómica: 0,100 puntos.</p>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-        <h2 id="puntuaciontotal">Puntuación total: <input type="text" name="restotal" value="0" readonly="readonly" size="4"> puntos</h2>
-      </div>
-    </div>
-            <p id="enlaceconv"
-                style="font-size: small; font-weight: bold; font-variant: small-caps; color: #ffffff; background-color: #999999; text-align: center; padding: 5px;">
-                <a href="https://extremadura.fespugt.es/sectores/ensenanza/noticia/6359-ugtensenanza-convocados-los-procedimientos-de-oposiciones-e-interinidades-docentes-2022"
-                    style="color: #ffffff;" target="_blank">Puedes consultar aquí el Texto de la Convocatoria, así como
-                    documentos con Información General y Preguntas Frecuentes</a></p>
-            <div id="urlcalcubaremo">
-                <p style="text-align: center;">https://ugtspext-ensenanza.github.io/calculadora-oposiciones-2022//</p>
-            </div>
-            
-            <div id="calcubaremo">
-				<p>&nbsp;</p>
-				<p style="text-align: center; font-weight: bold;">Las personas aspirantes no podrán alcanzar más de 10 puntos por la valoración de sus méritos.</p>
-				<!-- ########### SECCIÓN I - EXPERIENCIA DOCENTE ########### //-->
-				<div class="seccion">
-					<h2><span class="totalsec"><input class="maxsec" type="text" name="maxsec1" value="[Máx]" readonly="readonly" size="4"><input class="inputtotalsec" type="text" name="totalsec1" value="0" readonly="readonly" size="4"> puntos</span><span class="numseccion">1.</span> Experiencia docente previa <span class="txtmax">[Máx:5&nbsp;ptos]</span></h2>
-					<!-- ###### Subsección 1.1 ##### //-->
-					<h3><span class="numseccion">1.1.</span> Experiencia en el mismo cuerpo (centros públicos)</h3>
-					<!-- ## pregunta 1.1 ## //-->
-					<p class="pregunta"><span class="opcionesradio"><input class="optsino" type="radio" name="opti110" value="1"> Sí<input class="optsino" type="radio" name="opti110" value="0" checked="checked"> No</span><span class="numseccion">1.1.</span> ¿Tienes experiencia docente previa en especialidades del mismo cuerpo al que optas, en centros públicos?</p>
-					<div class="subseccion oculto">
-						<table border="0">
-							<tbody>
-								<tr>
-									<td>Escribe el tiempo que has trabajado, en centros docentes públicos, en especialidades del cuerpo al que vas a optar:</td>
-									<td style="width: 150px; padding: 10px;" rowspan="2" align="right" valign="bottom">Puntos 1.1: <input type="text" name="result110" value="0" readonly="readonly" size="4"></td>
-								</tr>
-								<tr>
-									<td style="padding: 10px;" valign="bottom">Años: <input class="intronum seccion1" type="text" name="data110x" value="0" size="3" maxlength="2">&nbsp;&nbsp;&nbsp;&nbsp;Meses: <input class="intronum meses seccion1" type="text" name="data110y" value="0" size="3" maxlength="2"></td>
-								</tr>
-							</tbody>
-						</table>
-						<div class="enlacesinfo">
-							<a class="toggleinfo" rel="val">Valoración</a><a class="toggleinfo" rel="doe">Más información</a>
-							<div class="info infoval">
-								<p>1.1 Por cada año de experiencia docente en especialidades del cuerpo al que opta el aspirante, en centros públicos: <strong>1,000 puntos</strong>.</p>
-								<p>A los efectos del apartado <em>“1. Experiencia docente previa”</em> se tendrá en cuenta un <strong>máximo de cinco años</strong>, cada uno de los cuales deberá ser valorado en uno solo de los subapartados.</p>
-							</div>
-							<div class="info infodoe">
-								<p>- Únicamente se tendrá en cuenta la experiencia docente en las enseñanzas previstas en la Ley 2/2006, de 3 de mayo, de Educación, con la única excepción de la experiencia docente desarrollada en la universidad, la cual será valorada en el apartado 1.4.</p>
-								<p>- A los efectos de este apartado, no podrán acumularse las puntuaciones cuando los servicios se hayan prestado, simultáneamente, en más de un centro docente o se hayan desempeñado en un mismo centro docente distintas especialidades al mismo tiempo.</p>
-								<p>- No se computarán en ningún caso las colaboraciones, tutorías o becas que puedan haberse realizado con cualquier Universidad si en los nombramientos o contratos suscritos no se acredita el desempeño de funciones o tareas docentes.</p>
-								<p>- No será objeto de valoración por este apartado la actividad desempeñada como monitor de actividades formativas complementarias.</p>
-								<p>- Los servicios prestados en el extranjero se acreditarán mediante certificados expedido por el Ministerio de Educación u órgano competente de los respectivos países, en los que deberán constar el tiempo de prestación de servicios y el carácter de centro público o privado, el nivel educativo y la materia impartida. Cuando no se acredite la materia impartida o la misma no coincida con alguna de las especialidades del respectivo cuerpo, los servicios se entenderán prestados en distinto nivel educativo al que se opta. Dichos certificados deberán presentarse traducidos al castellano, acompañados de traducción oficial.</p>
-								<p>- Se entenderá por centros públicos, los centros a que se refiere el Capítulo II del Título IV de la Ley Orgánica 2/2006, de Educación, integrados en la red pública de centros creados y sostenidos por las Administraciones educativas, y no aquellos que dependan de los Ayuntamientos, Diputaciones Provinciales u otras entidades de derecho público.</p>
-								<p><strong style="color: #000; font-size: 1.2em;">Documentos justificativos</strong></p>
-								<p>- Hoja de servicio emitida por órgano competente o, en su defecto, documentos justificativos del nombramiento, prórrogas y cese expedidos por órgano competente en los que conste la fecha exacta de toma de posesión, prórrogas y cese, así como el cuerpo y la especialidad.</p>
-								<p>- No será necesario acreditar la experiencia docente previa en centros públicos del ámbito de la Consejería de Educación y Empleo de la Junta de Extremadura.</p>
-								<p>- Certificación del director del centro con el visto bueno del Servicio de Inspección de Educación, haciendo constar la especialidad y la duración real de los servicios, con las fechas exactas del comienzo y terminación de los mismos, expresando día, mes y año.</p>
-								<p>- En el caso de que la experiencia docente se haya desempeñado en el primer ciclo de Educación Infantil, el certificado anterior deberá ir acompañado por el contrato de trabajo correspondiente.</p>
-							</div>
-						</div>
-					</div>
-					<!-- ###### Subsección 1.2 ##### //-->
-					<h3><span class="numseccion">1.2.</span> Experiencia en distinto cuerpo (centros públicos)</h3>
-					<!-- ## pregunta 1.2 ## //-->
-					<p class="pregunta"><span class="opcionesradio"><input class="optsino" type="radio" name="opti120" value="1"> Sí<input class="optsino" type="radio" name="opti120" value="0" checked="checked"> No</span><span class="numseccion">1.2.</span> ¿Tienes experiencia docente previa en especialidades de algún cuerpo distinto al que optas, en centros públicos?</p>
-					<div class="subseccion oculto">
-						<table border="0">
-							<tbody>
-								<tr>
-									<td>Indica el tiempo que has trabajado, en centros docentes públicos, en especialidades de cuerpos diferentes al que vas a optar:</td>
-									<td style="width: 150px; padding: 10px;" rowspan="2" align="right" valign="bottom">Puntos 1.2: <input type="text" name="result120" value="0" readonly="readonly" size="4"></td>
-								</tr>
-								<tr>
-									<td style="padding: 10px;" valign="bottom">Años: <input class="intronum seccion1" type="text" name="data120x" value="0" size="3" maxlength="2">&nbsp;&nbsp;&nbsp;&nbsp;Meses: <input class="intronum meses seccion1" type="text" name="data120y" value="0" size="3" maxlength="2"></td>
-								</tr>
-							</tbody>
-						</table>
-						<div class="enlacesinfo">
-							<a class="toggleinfo" rel="val">Valoración</a><a class="toggleinfo" rel="doe">Más información</a>
-							<div class="info infoval">
-								<p>1.2 Por cada año de experiencia docente en especialidades de distintos cuerpos al que opta el aspirante, en centros públicos: <strong>0,500 puntos</strong>.</p>
-								<p>A los efectos del apartado <em>“1. Experiencia docente previa”</em> se tendrá en cuenta un <strong>máximo de cinco años</strong>, cada uno de los cuales deberá ser valorado en uno solo de los subapartados.</p>
-							</div>
-							<div class="info infodoe">
-								<p>- Únicamente se tendrá en cuenta la experiencia docente en las enseñanzas previstas en la Ley 2/2006, de 3 de mayo, de Educación, con la única excepción de la experiencia docente desarrollada en la universidad, la cual será valorada en el apartado 1.4.</p>
-								<p>- A los efectos de este apartado, no podrán acumularse las puntuaciones cuando los servicios se hayan prestado, simultáneamente, en más de un centro docente o se hayan desempeñado en un mismo centro docente distintas especialidades al mismo tiempo.</p>
-								<p>- No se computarán en ningún caso las colaboraciones, tutorías o becas que puedan haberse realizado con cualquier Universidad si en los nombramientos o contratos suscritos no se acredita el desempeño de funciones o tareas docentes.</p>
-								<p>- No será objeto de valoración por este apartado la actividad desempeñada como monitor de actividades formativas complementarias.</p>
-								<p>- Los servicios prestados en el extranjero se acreditarán mediante certificados expedido por el Ministerio de Educación u órgano competente de los respectivos países, en los que deberán constar el tiempo de prestación de servicios y el carácter de centro público o privado, el nivel educativo y la materia impartida. Cuando no se acredite la materia impartida o la misma no coincida con alguna de las especialidades del respectivo cuerpo, los servicios se entenderán prestados en distinto nivel educativo al que se opta. Dichos certificados deberán presentarse traducidos al castellano, acompañados de traducción oficial.</p>
-								<p>- Se entenderá por centros públicos, los centros a que se refiere el Capítulo II del Título IV de la Ley Orgánica 2/2006, de Educación, integrados en la red pública de centros creados y sostenidos por las Administraciones educativas, y no aquellos que dependan de los Ayuntamientos, Diputaciones Provinciales u otras entidades de derecho público.</p>
-								<p><strong style="color: #000; font-size: 1.2em;">Documentos justificativos</strong></p>
-								<p>- Hoja de servicio emitida por órgano competente o, en su defecto, documentos justificativos del nombramiento, prórrogas y cese expedidos por órgano competente en los que conste la fecha exacta de toma de posesión, prórrogas y cese, así como el cuerpo y la especialidad.</p>
-								<p>- No será necesario acreditar la experiencia docente previa en centros públicos del ámbito de la Consejería de Educación y Empleo de la Junta de Extremadura.</p>
-								<p>- Certificación del director del centro con el visto bueno del Servicio de Inspección de Educación, haciendo constar la especialidad y la duración real de los servicios, con las fechas exactas del comienzo y terminación de los mismos, expresando día, mes y año.</p>
-								<p>- En el caso de que la experiencia docente se haya desempeñado en el primer ciclo de Educación Infantil, el certificado anterior deberá ir acompañado por el contrato de trabajo correspondiente.</p>
-							</div>
-						</div>
-					</div>
-					<!-- ###### Subsección 1.3 ##### //-->
-					<h3><span class="numseccion">1.3.</span> Experiencia en el mismo nivel educativo (centros no públicos)</h3>
-					<!-- ## pregunta 1.3 ## //-->
-					<p class="pregunta"><span class="opcionesradio"><input class="optsino" type="radio" name="opti130" value="1"> Sí<input class="optsino" type="radio" name="opti130" value="0" checked="checked"> No</span><span class="numseccion">1.3.</span> ¿Tienes experiencia docente previa en especialidades del mismo nivel educativo que el del cuerpo al que optas, en centros que no sean públicos?</p>
-					<div class="subseccion oculto">
-						<table border="0">
-							<tbody>
-								<tr>
-									<td>Indica durante cuánto tiempo has trabajado, en centros docentes que no sean públicos, en especialidades del mismo nivel educativo que el impartido por el cuerpo al que optas:</td>
-									<td style="width: 150px; padding: 10px;" rowspan="2" align="right" valign="bottom">Puntos 1.3: <input type="text" name="result130" value="0" readonly="readonly" size="4"></td>
-								</tr>
-								<tr>
-									<td style="padding: 10px;" valign="bottom">Años: <input class="intronum seccion1" type="text" name="data130x" value="0" size="3" maxlength="2">&nbsp;&nbsp;&nbsp;&nbsp;Meses: <input class="intronum meses seccion1" type="text" name="data130y" value="0" size="3" maxlength="2"></td>
-								</tr>
-							</tbody>
-						</table>
-						<div class="enlacesinfo">
-							<a class="toggleinfo" rel="val">Valoración</a><a class="toggleinfo" rel="doe">Más información</a>
-							<div class="info infoval">
-								<p>1.3 Por cada año de experiencia docente en especialidades del mismo nivel o etapa educativa que el impartido por el cuerpo al que opta el aspirante, en otros centros: <strong>0,500 puntos</strong>.</p>
-								<p>A los efectos del apartado <em>“1. Experiencia docente previa”</em> se tendrá en cuenta un <strong>máximo de cinco años</strong>, cada uno de los cuales deberá ser valorado en uno solo de los subapartados.</p>
-							</div>
-							<div class="info infodoe">
-								<p>- Únicamente se tendrá en cuenta la experiencia docente en las enseñanzas previstas en la Ley 2/2006, de 3 de mayo, de Educación, con la única excepción de la experiencia docente desarrollada en la universidad, la cual será valorada en el apartado 1.4.</p>
-								<p>- A los efectos de este apartado, no podrán acumularse las puntuaciones cuando los servicios se hayan prestado, simultáneamente, en más de un centro docente o se hayan desempeñado en un mismo centro docente distintas especialidades al mismo tiempo.</p>
-								<p>- No se computarán en ningún caso las colaboraciones, tutorías o becas que puedan haberse realizado con cualquier Universidad si en los nombramientos o contratos suscritos no se acredita el desempeño de funciones o tareas docentes.</p>
-								<p>- No será objeto de valoración por este apartado la actividad desempeñada como monitor de actividades formativas complementarias.</p>
-								<p>- Los servicios prestados en el extranjero se acreditarán mediante certificados expedido por el Ministerio de Educación u órgano competente de los respectivos países, en los que deberán constar el tiempo de prestación de servicios y el carácter de centro público o privado, el nivel educativo y la materia impartida. Cuando no se acredite la materia impartida o la misma no coincida con alguna de las especialidades del respectivo cuerpo, los servicios se entenderán prestados en distinto nivel educativo al que se opta. Dichos certificados deberán presentarse traducidos al castellano, acompañados de traducción oficial.</p>
-								<p>- Se entenderá por centros públicos, los centros a que se refiere el Capítulo II del Título IV de la Ley Orgánica 2/2006, de Educación, integrados en la red pública de centros creados y sostenidos por las Administraciones educativas, y no aquellos que dependan de los Ayuntamientos, Diputaciones Provinciales u otras entidades de derecho público.</p>
-								<p><strong style="color: #000; font-size: 1.2em;">Documentos justificativos</strong></p>
-								<p>- Hoja de servicio emitida por órgano competente o, en su defecto, documentos justificativos del nombramiento, prórrogas y cese expedidos por órgano competente en los que conste la fecha exacta de toma de posesión, prórrogas y cese, así como el cuerpo y la especialidad.</p>
-								<p>- No será necesario acreditar la experiencia docente previa en centros públicos del ámbito de la Consejería de Educación y Empleo de la Junta de Extremadura.</p>
-								<p>- Certificación del director del centro con el visto bueno del Servicio de Inspección de Educación, haciendo constar la especialidad y la duración real de los servicios, con las fechas exactas del comienzo y terminación de los mismos, expresando día, mes y año.</p>
-								<p>- En el caso de que la experiencia docente se haya desempeñado en el primer ciclo de Educación Infantil, el certificado anterior deberá ir acompañado por el contrato de trabajo correspondiente.</p>
-							</div>
-						</div>
-					</div>
-					<!-- ###### Subsección 1.4 ##### //-->
-					<h3><span class="numseccion">1.4.</span> Experiencia en distinto nivel educativo (centros no públicos)</h3>
-					<!-- ## pregunta 1.4 ## //-->
-					<p class="pregunta"><span class="opcionesradio"><input class="optsino" type="radio" name="opti140" value="1"> Sí<input class="optsino" type="radio" name="opti140" value="0" checked="checked"> No</span><span class="numseccion">1.4.</span> ¿Tienes experiencia docente previa en especialidades de distinto nivel educativo que el del cuerpo al que optas, en centros que no sean públicos?</p>
-					<div class="subseccion oculto">
-						<table border="0">
-							<tbody>
-								<tr>
-									<td>Indica durante cuánto tiempo has trabajado, en centros docentes que no sean públicos, en especialidades de distinto nivel educativo que el impartido por el cuerpo al que optas:</td>
-									<td style="width: 150px; padding: 10px;" rowspan="2" align="right" valign="bottom">Puntos 1.4: <input type="text" name="result140" value="0" readonly="readonly" size="4"></td>
-								</tr>
-								<tr>
-									<td style="padding: 10px;" valign="bottom">Años: <input class="intronum seccion1" type="text" name="data140x" value="0" size="3" maxlength="2">&nbsp;&nbsp;&nbsp;&nbsp;Meses: <input class="intronum meses seccion1" type="text" name="data140y" value="0" size="3" maxlength="2"></td>
-								</tr>
-							</tbody>
-						</table>
-						<div class="enlacesinfo">
-							<a class="toggleinfo" rel="val">Valoración</a><a class="toggleinfo" rel="doe">Más información</a>
-							<div class="info infoval">
-								<p>1.4 Por cada año de experiencia docente en especialidades de distinto nivel o etapa educativa que el impartido por el cuerpo al que opta el aspirante, en otros centros: <strong>0,250 puntos</strong>.</p>
-								<p>A los efectos del apartado <em>“1. Experiencia docente previa”</em> se tendrá en cuenta un <strong>máximo de cinco años</strong>, cada uno de los cuales deberá ser valorado en uno solo de los subapartados.</p>
-							</div>
-							<div class="info infodoe">
-								<p>- Únicamente se tendrá en cuenta la experiencia docente en las enseñanzas previstas en la Ley 2/2006, de 3 de mayo, de Educación, con la única excepción de la experiencia docente desarrollada en la universidad, la cual será valorada en el apartado 1.4.</p>
-								<p>- A los efectos de este apartado, no podrán acumularse las puntuaciones cuando los servicios se hayan prestado, simultáneamente, en más de un centro docente o se hayan desempeñado en un mismo centro docente distintas especialidades al mismo tiempo.</p>
-								<p>- No se computarán en ningún caso las colaboraciones, tutorías o becas que puedan haberse realizado con cualquier Universidad si en los nombramientos o contratos suscritos no se acredita el desempeño de funciones o tareas docentes.</p>
-								<p>- No será objeto de valoración por este apartado la actividad desempeñada como monitor de actividades formativas complementarias.</p>
-								<p>- Los servicios prestados en el extranjero se acreditarán mediante certificados expedido por el Ministerio de Educación u órgano competente de los respectivos países, en los que deberán constar el tiempo de prestación de servicios y el carácter de centro público o privado, el nivel educativo y la materia impartida. Cuando no se acredite la materia impartida o la misma no coincida con alguna de las especialidades del respectivo cuerpo, los servicios se entenderán prestados en distinto nivel educativo al que se opta. Dichos certificados deberán presentarse traducidos al castellano, acompañados de traducción oficial.</p>
-								<p>- Se entenderá por centros públicos, los centros a que se refiere el Capítulo II del Título IV de la Ley Orgánica 2/2006, de Educación, integrados en la red pública de centros creados y sostenidos por las Administraciones educativas, y no aquellos que dependan de los Ayuntamientos, Diputaciones Provinciales u otras entidades de derecho público.</p>
-								<p><strong style="color: #000; font-size: 1.2em;">Documentos justificativos</strong></p>
-								<p>- Hoja de servicio emitida por órgano competente o, en su defecto, documentos justificativos del nombramiento, prórrogas y cese expedidos por órgano competente en los que conste la fecha exacta de toma de posesión, prórrogas y cese, así como el cuerpo y la especialidad.</p>
-								<p>- No será necesario acreditar la experiencia docente previa en centros públicos del ámbito de la Consejería de Educación y Empleo de la Junta de Extremadura.</p>
-								<p>- Certificación del director del centro con el visto bueno del Servicio de Inspección de Educación, haciendo constar la especialidad y la duración real de los servicios, con las fechas exactas del comienzo y terminación de los mismos, expresando día, mes y año.</p>
-								<p>- En el caso de que la experiencia docente se haya desempeñado en el primer ciclo de Educación Infantil, el certificado anterior deberá ir acompañado por el contrato de trabajo correspondiente.</p>
-							</div>
-						</div>
-					</div>
-				</div>
-				<!-- ########### SECCIÓN II - FORMACIÓN ACADÉMICA ########### //-->
-				<div class="seccion">
-					<h2><span class="totalsec"><input class="maxsec" type="text" name="maxsec2" value="[Máx]" readonly="readonly" size="4"><input class="inputtotalsec" type="text" name="totalsec2" value="0" readonly="readonly" size="4"> puntos</span><span class="numseccion">2.</span> Formación académica <span class="txtmax">[Máx:5&nbsp;ptos]</span></h2>
-					<!-- ###### Subsección 2.1 ##### //-->
-					<h3><span class="numseccion">2.1.</span> Expediente académico en el título alegado</h3>
-					<!-- ## pregunta 2.1 ## //-->
-					<div class="subseccion">
-						<table border="0">
-							<tbody>
-								<tr>
-									<td>Escribe la nota media que obtuviste en la titulación que alegues en la oposición (debe ser el mismo nivel de titulación que el que se exija, con carácter general, para acceder al cuerpo):</td>
-									<td style="width: 150px; padding: 10px;" rowspan="2" align="right" valign="bottom">Puntos 2.1: <input type="text" name="result210" value="0" readonly="readonly" size="4"></td>
-								</tr>
-								<tr>
-									<td style="padding: 10px;" valign="bottom">Nota media: <input class="intronum nota" type="text" name="data210x" value="0" size="3" maxlength="4"></td>
-								</tr>
-							</tbody>
-						</table>
-						<div class="enlacesinfo">
-							<a class="toggleinfo" rel="val">Valoración</a><a class="toggleinfo" rel="doe">Más información</a>
-							<div class="info infoval">
-								<p>2.1. Expediente académico en el título alegado:</p>
-								<p>Se valorará exclusivamente la nota media del expediente académico del título alegado para ingreso en el Cuerpo de Maestros (Maestro, Profesor de Educación General Básica, Maestro de enseñanza primaria o de Grado correspondiente), del siguiente modo:</p>
-								<p style="text-align: center;"><strong>(nota media - 5) x 0,3</strong><br><strong>(Máximo 1,500 puntos)</strong></p>
-							</div>
-							<div class="info infodoe">
-								<p>- Sólo se tendrá en cuenta el expediente académico del título exigido con carácter general para ingreso en el Cuerpo de Maestros (Maestro, Profesor de Educación General Básica, Maestro de enseñanza primaria o de Grado correspondiente).</p>
-								<p>- No se tendrá en cuenta la nota media que figure en la certificación académica cuando las puntuaciones de las asignaturas no estén expresadas numéricamente, procediéndose a su obtención según las equivalencias señaladas en el baremo. Tampoco se tomarán en consideración para obtener la nota media del expediente académico, las calificaciones correspondientes a materias complementarias, proyectos de fin de carreras técnicas o análogos. En el supuesto de una titulación universitaria de segundo ciclo, será necesario aportar tanto la certificación académica de ésta como la de la titulación de primer ciclo, resultando la nota media del expediente la que resulte de computar las asignaturas de ambas.</p>
-								<p>- Cuando en el expediente académico se haga constar, tanto la calificación literal como la numérica, sólo se tendrá en consideración esta última.</p>
-								<p>- En caso de que dichas titulaciones se hayan obtenido en el extranjero deberá haberse concedido la correspondiente homologación de conformidad con la normativa vigente. En este caso, y con objeto de calcular la nota media del expediente académico, deberá aportar certificación expedida por la Administración Educativa del país en que se obtuvo el título que indique la nota media deducida de las calificaciones obtenidas en toda la carrera y exprese además la calificación máxima y mínima de acuerdo con el sistema académico correspondiente, a efectos de determinar su equivalencia con las calificaciones españolas.</p>
-								<p><strong style="color: #000; font-size: 1.2em;">Documentos justificativos</strong></p>
-								<p>Certificación académica personal en la que consten las puntuaciones correspondientes a todas las asignaturas y cursos exigidos para la obtención del título alegado.</p>
-								<p>Para calcular la nota media en los casos en que no figure la expresión numérica concreta se aplicarán las siguientes equivalencias:</p>
-								<p style="padding-left: 30px;">- Convalidación: 5 puntos, salvo el caso de que se aporte certificación en la que se acredite la calificación que dio origen a la convalidación, considerándose en este caso la calificación originaria.<br>- Aprobado o apto: 5 puntos.<br>- Bien: 6 puntos.<br>- Notable: 7 puntos.<br>Sobresaliente: 9 puntos.<br>Matrícula de Honor: 10 puntos</p>
-							</div>
-						</div>
-					</div>
-					<!-- ###### Subsección 2.2 ##### //-->
-					<h3><span class="numseccion">2.2.</span> Postgrados, Doctorado y premios extraordinarios</h3>
-					<!-- ## pregunta 2.2.1 ## //-->
-					<p class="pregunta"><span class="opcionesradio"><input class="optsino optsinodirecto" type="radio" name="opti221" value="1"> Sí<input class="optsino optsinodirecto" type="radio" name="opti221" value="0" checked="checked"> No</span><span class="numseccion">2.2.1.</span> ¿Tienes Máster oficial, Diploma de Estudios Avanzados, Suficiencia investigadora, o similar?</p>
-					<div class="subseccion oculto">
-						<table border="0">
-							<tbody>
-								<tr>
-									<td>Marca «Sí» si posees el Certificado-Diploma acreditativo de Estudios Avanzados, o el Título Oficial de Máster, Suficiencia investigadora, u otro título equivalente, que no sea requisito para acceder a la docencia.</td>
-									<td style="width: 150px; padding: 10px;" rowspan="2" align="right" valign="bottom">Puntos 2.2.1: <input type="text" name="result221" value="0" readonly="readonly" size="4"></td>
-								</tr>
-							</tbody>
-						</table>
-						<div class="enlacesinfo">
-							<a class="toggleinfo" rel="val">Valoración</a><a class="toggleinfo" rel="doe">Más información</a>
-							<div class="info infoval">
-								<p>2.2.1. Por el Certificado-Diploma acreditativo de Estudios Avanzados (Real Decreto 778/1998, de 30 de abril) o el Título Oficial de Master (Real Decreto 56/2005, de 21 de enero), Suficiencia investigadora o cualquier otro título equivalente, siempre que no sean requisito para el ingreso en la función pública docente: <strong>1,000 puntos</strong>.</p>
-							</div>
-							<div class="info infodoe">
-								<p>- Se valorará un único título por cada una de las titulaciones académicas enumeradas en cada uno de los subapartados.</p>
-								<p>- En el apartado 2.2.1 se valorarán los títulos oficiales de Máster Universitario regulados en el Real Decreto 1393/2007.</p>
-								<p><strong style="color: #000; font-size: 1.2em;">Documentos justificativos</strong></p>
-								<p>Título alegado, o, en su defecto, del certificado de abono de los derechos de expedición.</p>
-							</div>
-						</div>
-					</div>
-					<!-- ## pregunta 2.2.2 ## //-->
-					<p class="pregunta"><span class="opcionesradio"><input class="optsino optsinodirecto" type="radio" name="opti222" value="1"> Sí<input class="optsino optsinodirecto" type="radio" name="opti222" value="0" checked="checked"> No</span><span class="numseccion">2.2.2.</span> ¿Tienes el título de doctor?</p>
-					<div class="subseccion oculto">
-						<table border="0">
-							<tbody>
-								<tr>
-									<td>Marca «Sí» si posees el título de doctor.</td>
-									<td style="width: 150px; padding: 10px;" rowspan="2" align="right" valign="bottom">Puntos 2.2.2: <input type="text" name="result222" value="0" readonly="readonly" size="4"></td>
-								</tr>
-							</tbody>
-						</table>
-						<div class="enlacesinfo">
-							<a class="toggleinfo" rel="val">Valoración</a><a class="toggleinfo" rel="doe">Más información</a>
-							<div class="info infoval">
-								<p>2.2.2. Por poseer el título de doctor: <strong>1,000 puntos</strong>.</p>
-							</div>
-							<div class="info infodoe">
-								<p>- Se valorará un único título por cada una de las titulaciones académicas enumeradas en cada uno de los subapartados.</p>
-								<p><strong style="color: #000; font-size: 1.2em;">Documentos justificativos</strong></p>
-								<p>Título alegado, o, en su defecto, del certificado de abono de los derechos de expedición.</p>
-							</div>
-						</div>
-					</div>
-					<!-- ## pregunta 2.2.3 ## //-->
-					<p class="pregunta"><span class="opcionesradio"><input class="optsino optsinodirecto" type="radio" name="opti223" value="1"> Sí<input class="optsino optsinodirecto" type="radio" name="opti223" value="0" checked="checked"> No</span><span class="numseccion">2.2.3.</span> ¿Has obtenido premio extraordinario en el doctorado?</p>
-					<div class="subseccion oculto">
-						<table border="0">
-							<tbody>
-								<tr>
-									<td>Marca «Sí» si obtuviste premio extraordinario en el doctorado.</td>
-									<td style="width: 150px; padding: 10px;" rowspan="2" align="right" valign="bottom">Puntos 2.2.3: <input type="text" name="result223" value="0" readonly="readonly" size="4"></td>
-								</tr>
-							</tbody>
-						</table>
-						<div class="enlacesinfo">
-							<a class="toggleinfo" rel="val">Valoración</a><a class="toggleinfo" rel="doe">Más información</a>
-							<div class="info infoval">
-								<p>2.2.3. Por haber obtenido premio extraordinario en el doctorado: <strong>0,500 puntos</strong>.</p>
-							</div>
-							<div class="info infodoe">
-								<p>- Se valorará un único título por cada una de las titulaciones académicas enumeradas en cada uno de los subapartados.</p>
-								<p><strong style="color: #000; font-size: 1.2em;">Documentos justificativos</strong></p>
-								<p>Título alegado, o, en su defecto, del certificado de abono de los derechos de expedición.</p>
-							</div>
-						</div>
-					</div>
-					<!-- ###### Subsección 2.3 ##### //-->
-					<h3><span class="numseccion">2.3.</span> Otras titulaciones universitarias de carácter oficial</h3>
-					<!-- ## pregunta 2.3.1 ## //-->
-					<p class="pregunta"><span class="opcionesradio"><input class="optsino" type="radio" name="opt231" value="1"> Sí<input class="optsino" type="radio" name="opt231" value="0" checked="checked"> No</span><span class="numseccion">2.3.1.</span> ¿Tienes titulaciones de primer ciclo, además de la aportada inicialmente?</p>
-					<div class="subseccion oculto">
-						<table border="0">
-							<tbody>
-								<tr>
-									<td>Indica el número de títulos de primer ciclo (diplomaturas, ingenierías técnicas, arquitecturas técnicas, o títulos declarados equivalentes, o estudios del primer ciclo de una licenciatura, ingeniería o arquitectura) que poseas, aparte del primero que aportes. <em>[mira el cuadro «Valoración» para ver las titulaciones que podrás valorarte]</em>:</td>
-									<td style="width: 150px; padding: 10px;" rowspan="2" align="right" valign="bottom">Puntos 2.3.1: <input type="text" name="result231" value="0" readonly="readonly" size="4"></td>
-								</tr>
-								<tr>
-									<td style="padding: 10px;" valign="bottom">Nº de titulaciones: <input class="intronum" type="text" name="data231x" value="0" size="3" maxlength="1"></td>
-								</tr>
-							</tbody>
-						</table>
-						<div class="enlacesinfo">
-							<a class="toggleinfo" rel="val">Valoración</a><a class="toggleinfo" rel="doe">Más información</a>
-							<div class="info infoval">
-								<p>Las titulaciones universitarias de carácter oficial, en el caso de que no hubieran sido las alegadas como requisito para el ingreso en la función docente, se valorarán de la forma siguiente:</p>
-								<p>2.3.1 Titulaciones de primer ciclo:</p>
-								<p>Por cada Diplomatura, Ingeniería Técnica, Arquitectura Técnica o títulos declarados legalmente equivalentes y por los estudios correspondientes al primer ciclo de una&nbsp;Licenciatura, Arquitectura o Ingeniería: <strong>1,000 puntos</strong>.</p>
-								<p>En el caso de los aspirantes al Cuerpo de Profesores Técnicos de Formación Profesional no se valorarán por este apartado, en ningún caso, el primer título o estudios de esta naturaleza que presente el aspirante.</p>
-								<p>En el caso de los aspirantes a los Cuerpos de Profesores de Enseñanza Secundaria, Escuelas Oficiales de Idiomas y Música y Artes Escénicas no se valorarán por este apartado, en ningún caso, el primer título de Licenciado, Ingeniero o Arquitecto que presente el aspirante.</p>
-							</div>
-							<div class="info infodoe">
-								<p>- Para la valoración del apartado 2.3.1, Titulaciones de primer ciclo, se otorgará 1 punto por cada título de Grado.</p>
-								<p>- No serán objeto de valoración los títulos obtenidos íntegramente mediante convalidación.</p>
-								<p><strong style="color: #000; font-size: 1.2em;">Documentos justificativos</strong></p>
-								<p>Se presentará tanto del título requerido para el ingreso a la especialidad correspondiente, como título alegado como mérito:</p>
-								<p style="padding-left: 30px;">- Certificación académica personal, y<br>- El título o, en defecto de este, certificación del abono de los derechos de expedición del título.</p>
-								<p>No se considerará acreditado correctamente el título alegado cuando no se aporte alguno de los documentes indicados.</p>
-							</div>
-						</div>
-					</div>
-					<!-- ## pregunta 2.3.2 ## //-->
-					<p class="pregunta"><span class="opcionesradio"><input class="optsino" type="radio" name="opt232" value="1"> Sí<input class="optsino" type="radio" name="opt232" value="0" checked="checked"> No</span><span class="numseccion">2.3.2.</span> ¿Tienes titulaciones de segundo ciclo, además de la aportada inicialmente?</p>
-					<div class="subseccion oculto">
-						<table border="0">
-							<tbody>
-								<tr>
-									<td>Indica el número de titulaciones por estudios correspondientes al segundo ciclo de licenciaturas, ingenierías, arquitecturas, o títulos declarados legalmente equivalentes, que poseas (si aspiras a los Cuerpos de Secundaria, E.O.I., o Música y Artes Escénicas no se valorarán los estudios requeridos para el primer título aportado). <em>[mira el cuadro «Valoración» para ver las titulaciones que podrás valorarte]</em>:</td>
-									<td style="width: 150px; padding: 10px;" rowspan="2" align="right" valign="bottom">Puntos 2.3.2: <input type="text" name="result232" value="0" readonly="readonly" size="4"></td>
-								</tr>
-								<tr>
-									<td style="padding: 10px;" valign="bottom">Nº de titulaciones: <input class="intronum" type="text" name="data232x" value="0" size="3" maxlength="1"></td>
-								</tr>
-							</tbody>
-						</table>
-						<div class="enlacesinfo">
-							<a class="toggleinfo" rel="val">Valoración</a><a class="toggleinfo" rel="doe">Más información</a>
-							<div class="info infoval">
-								<p>Las titulaciones universitarias de carácter oficial, en el caso de que no hubieran sido las alegadas como requisito para el ingreso en la función docente, se valorarán de la forma siguiente:</p>
-								<p>2.3.2 Titulaciones de segundo ciclo:</p>
-								<p>Por los estudios correspondientes al segundo ciclo de Licenciaturas, Ingenierías, Arquitecturas o títulos declarados legalmente equivalentes: <strong>1,000 puntos</strong>.</p>
-								<p>En el caso de los aspirantes a los Cuerpos de Profesores de Enseñanza Secundaria, Escuelas Oficiales de Idiomas y Música y Artes Escénicas no se valorarán por este apartado, en ningún caso, los estudios que hayan sido necesario superar (primer ciclo, segundo ciclo o, en su caso, enseñanzas complementarias) para la obtención del primer título de Licenciado, Ingeniero o Arquitecto que presente el aspirante.</p>
-							</div>
-							<div class="info infodoe">
-								<p>- No serán objeto de valoración los títulos obtenidos íntegramente mediante convalidación.</p>
-								<p><strong style="color: #000; font-size: 1.2em;">Documentos justificativos</strong></p>
-								<p>Se presentará tanto del título requerido para el ingreso a la especialidad correspondiente, como título alegado como mérito:</p>
-								<p style="padding-left: 30px;">- Certificación académica personal, y<br>- El título o, en defecto de este, certificación del abono de los derechos de expedición del título.</p>
-								<p>No se considerará acreditado correctamente el título alegado cuando no se aporte alguno de los documentes indicados.</p>
-							</div>
-						</div>
-					</div>
-					<!-- ###### Subsección 2.4 ##### //-->
-					<h3><span class="numseccion">2.4.</span> Titulaciones de enseñanzas de régimen especial y de la formación profesional</h3>
-					<!-- ## pregunta 2.4 ## //-->
-					<p class="pregunta"><span class="opcionesradio"><input class="optsino" type="radio" name="opt240" value="1"> Sí<input class="optsino" type="radio" name="opt240" value="0" checked="checked"> No</span><span class="numseccion">2.4.</span> ¿Has cursado enseñanzas de régimen especial (idiomas, música o arte, o enseñanzas deportivas) o de formación profesional?</p>
-					<div class="subseccion oculto">
-						<table border="0">
-							<tbody>
-								<tr>
-									<td>Indica el número de titulaciones que has obtenido en enseñanzas de régimen especial (Escuelas Oficiales de Idiomas, Conservatorios y Escuelas de Arte, o de Técnico Deportivo), o en Formación Profesional, que no sean las exigidas para acceder a la docencia:</td>
-									<td style="width: 150px; padding: 10px;" rowspan="2" align="right" valign="bottom">Puntos 2.4: <input type="text" name="result240" value="0" readonly="readonly" size="4"></td>
-								</tr>
-								<tr>
-									<td style="padding: 10px;" valign="bottom">
-										<table style="width: 100%; border: 0;">
-											<tbody>
-												<tr>
-													<td>Títulos Profesionales de Música o Danza:</td>
-													<td valign="top"><input class="intronum" type="text" name="data240u" value="0" size="3" maxlength="1"></td>
-												</tr>
-												<tr>
-													<td>Certificados de nivel avanzado, o equivalentes, en Escuelas Oficiales de Idiomas:</td>
-													<td valign="top"><input class="intronum" type="text" name="data240v" value="0" size="3" maxlength="1"></td>
-												</tr>
-												<tr>
-													<td>Títulos de Técnico Superior de Artes Plásticas y Diseño:</td>
-													<td valign="top"><input class="intronum" type="text" name="data240w" value="0" size="3" maxlength="1"></td>
-												</tr>
-												<tr>
-													<td>Títulos de Técnico Superior de Formación Profesional:</td>
-													<td valign="top"><input class="intronum" type="text" name="data240x" value="0" size="3" maxlength="1"></td>
-												</tr>
-												<tr>
-													<td>Títulos de Técnico Deportivo Superior:</td>
-													<td valign="top"><input class="intronum" type="text" name="data240y" value="0" size="3" maxlength="1"></td>
-												</tr>
-											</tbody>
-										</table>
-									</td>
-								</tr>
-							</tbody>
-						</table>
-						<div class="enlacesinfo">
-							<a class="toggleinfo" rel="val">Valoración</a><a class="toggleinfo" rel="doe">Más información</a>
-							<div class="info infoval">
-								<p>2.4. Por titulaciones de enseñanzas de régimen especial y de la formación profesional específica:<br>Las titulaciones de las enseñanzas de régimen especial otorgadas por las Escuelas Oficiales de Idiomas, Conservatorios Profesionales y Superiores de Música y Escuelas de Arte, así como las de formación profesional específica, caso de no haber sido las alegadas como requisito para ingreso en la función pública docente o, en su caso, no hayan sido necesarias para la obtención del título alegado, se valorarán de la siguiente forma:</p>
-								<p style="padding-left: 30px;">a) Por cada título Profesional de Música o Danza: <strong>0,500 puntos</strong>.<br>b) Por cada Certificado de nivel avanzado o equivalente de Escuelas Oficiales de Idiomas: <strong>0,500 puntos</strong>.<br>c) Por cada Título de Técnico Superior de Artes Plásticas y Diseño: <strong>0,200 puntos</strong>.<br>d) Por cada Título de Técnico Superior de Formación Profesional: <strong>0,200 puntos</strong>.<br>e) Por cada Título de Técnico Deportivo Superior: <strong>0,200 puntos</strong>.</p>
-							</div>
-							<div class="info infodoe">
-								<p>- No serán objeto de valoración los títulos obtenidos íntegramente mediante convalidación.</p>
-								<p>- Para la valoración de los títulos de Escuelas Oficiales de Idiomas se tendrá en cuenta las equivalencias establecidas en el Anexo II del RD 1041/2017, de 22 de diciembre, por el que se fijan las exigencias mínimas del nivel básico a efectos de certificación, se establece el currículo básico de los niveles Intermedio B2, Avanzado C1, y Avanzado C2, de las Enseñanzas de idiomas de régimen especial reguladas por la Ley Orgánica 2/2006, de 3 de mayo, de Educación, y se establecen las equivalencias entre las Enseñanzas de idiomas de régimen especial reguladas en diversos planes de estudios y las de ese real decreto, no computándose a efectos del baremo el Nivel Básico e Intermedio B1. Cuando la persona participante presente varios certificados del mismo idioma, solo se tendrán en cuenta el de nivel superior que presente. No se valorará en el caso de haber sido alegado para el ingreso en la función pública docente, o en su caso para la obtención del título alegado.</p>
-								<p><strong style="color: #000; font-size: 1.2em;">Documentos justificativos</strong></p>
-								<p>Título alegado o, en su defecto, del certificado del abono de los derechos de expedición.</p>
-							</div>
-						</div>
-					</div>
-				</div>
-				<!-- ########### SECCIÓN III - OTROS MÉRITOS ########### //-->
-				<div class="seccion">
-					<h2><span class="totalsec"><input class="maxsec" type="text" name="maxsec3" value="[Máx]" readonly="readonly" size="4"><input class="inputtotalsec" type="text" name="totalsec3" value="0" readonly="readonly" size="4"> puntos</span><span class="numseccion">3.</span> Otros méritos <span class="txtmax">[Máx:2&nbsp;ptos]</span></h2>
-					<!-- ###### Subsección 3.1 ##### //-->
-					<h3><span class="numseccion">3.1.</span> Formación Permanente</h3>
-					<!-- ## pregunta 3.1.1 ## //-->
-					<p class="pregunta"><span class="opcionesradio"><input class="optsino" type="radio" name="opt311" value="1"> Sí<input class="optsino" type="radio" name="opt311" value="0" checked="checked"> No</span><span class="numseccion">3.1.1.</span> ¿Has participado o impartido seminarios, jornadas, grupos de trabajo o proyectos de formación relacionados con plataformas web tipo Rayuela o sistemas operativos no propietarios?</p>
-					<div class="subseccion oculto">
-						<table border="0">
-							<tbody>
-								<tr>
-									<td>Indica el número de créditos superados o impartidos como ponente en cursos, seminarios, jornadas, grupos de trabajo o proyectos de formación permanente y perfeccionamiento, directamente relacionados con plataformas web de gestión escolar, similares a Rayuela, o sistemas operativos no propietarios:</td>
-									<td style="width: 150px; padding: 10px;" rowspan="2" align="right" valign="bottom"><em class="txtmax2">[Máx:1,000 ptos]</em><br>Puntos 3.1.1: <input type="text" name="result311" value="0" readonly="readonly" size="4"></td>
-								</tr>
-								<tr>
-									<td style="padding: 10px;" valign="bottom">Nº de créditos: <input class="intronum" type="text" name="data311x" value="0" size="3" maxlength="2"></td>
-								</tr>
-							</tbody>
-						</table>
-						<div class="enlacesinfo">
-							<a class="toggleinfo" rel="val">Valoración</a><a class="toggleinfo" rel="doe">Más información</a>
-							<div class="info infoval">
-								<p>3.1.1. Por cursos, seminarios, jornadas, grupos de trabajo o proyectos de formación permanente y perfeccionamiento superados o impartidos como ponente, directamente relacionados con plataformas web de gestión escolar, similares a Rayuela, o sistemas operativos no propietarios, por cada crédito: <strong>0,050 puntos</strong>.&nbsp;(hasta un <strong>máximo de 1 punto</strong>).</p>
-							</div>
-							<div class="info infodoe">
-								<p>- En ningún caso serán valorados por este apartado los cursos o actividades cuya finalidad sea la obtención de un título académico.</p>
-								<p>- Se valorarán los cursos, seminarios, jornadas, grupos de trabajo o proyectos realizados o impartidos como ponente.</p>
-								<p>- De expresarse el certificado en horas se entenderá que cada 10 horas equivalen a 1 crédito.</p>
-								<p>- No se valorarán las actividades formativas en que no conste expresamente el número de créditos o de horas.</p>
-								<p>- Sólo se tendrán en cuenta las actividades de formación de las universidades públicas o privadas cuando el certificado esté firmado por el Secretario, Decano, Rector, Vicerrector o Director de Escuela Universitaria, salvo que la persona interesada acredite documentalmente que el órgano firmante es competente para ello.</p>
-								<p>- Las actividades de formación de las universidades de verano se valorarán únicamente si han sido auspiciadas por una universidad pública o privada legalmente autorizada. No se tendrán en cuentas las convocadas por Fundaciones, Patronatos…, aunque estén vinculadas con una universidad pública o privada.</p>
-								<p>- Cuando las actividades de formación coincidan en el tiempo y no se trate de actividades formativas a distancia, solo se valorará aquella que sea más favorable –en horas- para la persona interesada.</p>
-								<p><strong style="color: #000; font-size: 1.2em;">Documentos justificativos</strong></p>
-								<p>En el caso de la formación continua, certificación de la actividad donde conste de modo expreso el número de horas de duración del curso o número de créditos.</p>
-								<p>En el caso de las actividades de formación homologadas, se deberá acompañar, necesariamente, la correspondiente diligencia de homologación de la actividad expedida por la Consejería de Educación y Cultura de la Junta de Extremadura u otras Administraciones Educativas.</p>
-								<p>En el caso de los cursos de la Universidad la certificación deberá ser emitida por el órgano competente.</p>
-							</div>
-						</div>
-					</div>
-					<!-- ## pregunta 3.1.2 ## //-->
-					<p class="pregunta"><span class="opcionesradio"><input class="optsino" type="radio" name="opt312" value="1"> Sí<input class="optsino" type="radio" name="opt312" value="0" checked="checked"> No</span><span class="numseccion">3.1.2.</span> ¿Has participado o impartido seminarios, jornadas, grupos de trabajo o proyectos de formación no valorables en el apartado anterior?</p>
-					<div class="subseccion oculto">
-						<table border="0">
-							<tbody>
-								<tr>
-									<td>Indica el número de créditos superados o impartidos como ponente en cursos, seminarios, jornadas, grupos de trabajo o proyectos de formación permanente y perfeccionamiento, que no sean valorables en el apartado 3.1.1:</td>
-									<td style="width: 150px; padding: 10px;" rowspan="2" align="right" valign="bottom"><em class="txtmax2">[Máx:1,500 ptos]</em><br>Puntos 3.1.2: <input type="text" name="result312" value="0" readonly="readonly" size="4"></td>
-								</tr>
-								<tr>
-									<td style="padding: 10px;" valign="bottom">Nº de créditos: <input class="intronum" type="text" name="data312x" value="0" size="3" maxlength="2"></td>
-								</tr>
-							</tbody>
-						</table>
-						<div class="enlacesinfo">
-							<a class="toggleinfo" rel="val">Valoración</a><a class="toggleinfo" rel="doe">Más información</a>
-							<div class="info infoval">
-								<p>3.1.2.- Por cursos, seminarios, jornadas, grupos de trabajo o proyectos de formación permanente y perfeccionamiento superados o impartidos como ponente, no valorables en el apartado anterior, por cada crédito: <strong>0,030 puntos</strong>. (hasta un <strong>máximo de 1,500 puntos</strong>).</p>
-							</div>
-							<div class="info infodoe">
-								<p>- En ningún caso serán valorados por este apartado los cursos o actividades cuya finalidad sea la obtención de un título académico.</p>
-								<p>- Se valorarán los cursos, seminarios, jornadas, grupos de trabajo o proyectos realizados o impartidos como ponente.</p>
-								<p>- De expresarse el certificado en horas se entenderá que cada 10 horas equivalen a 1 crédito.</p>
-								<p>- No se valorarán las actividades formativas en que no conste expresamente el número de créditos o de horas.</p>
-								<p>- Sólo se tendrán en cuenta las actividades de formación de las universidades públicas o privadas cuando el certificado esté firmado por el Secretario, Decano, Rector, Vicerrector o Director de Escuela Universitaria, salvo que la persona interesada acredite documentalmente que el órgano firmante es competente para ello.</p>
-								<p>- Las actividades de formación de las universidades de verano se valorarán únicamente si han sido auspiciadas por una universidad pública o privada legalmente autorizada. No se tendrán en cuentas las convocadas por Fundaciones, Patronatos…, aunque estén vinculadas con una universidad pública o privada.</p>
-								<p>- Cuando las actividades de formación coincidan en el tiempo y no se trate de actividades formativas a distancia, solo se valorará aquella que sea más favorable –en horas- para la persona interesada.</p>
-								<p><strong style="color: #000; font-size: 1.2em;">Documentos justificativos</strong></p>
-								<p>En el caso de la formación continua, certificación de la actividad donde conste de modo expreso el número de horas de duración del curso o número de créditos.</p>
-								<p>En el caso de las actividades de formación homologadas, se deberá acompañar, necesariamente, la correspondiente diligencia de homologación de la actividad expedida por la Consejería de Educación y Cultura de la Junta de Extremadura u otras Administraciones Educativas.</p>
-								<p>En el caso de los cursos de la Universidad la certificación deberá ser emitida por el órgano competente.</p>
-							</div>
-						</div>
-					</div>
-					<!-- ###### Subsección 3.2 ##### //-->
-					<h3><span class="numseccion">3.2.</span> Premios en certámenes musicales</h3>
-					<!-- ## pregunta 3.2 ## //-->
-					<p class="pregunta"><span class="opcionesradio"><input class="optsino optsinodirecto" type="radio" name="opti320" value="1"> Sí<input class="optsino optsinodirecto" type="radio" name="opti320" value="0" checked="checked"> No</span><span class="numseccion">3.2.</span> ¿Te presentas a alguna especialidad de Música y has obtenido algún premio en certámenes musicales?</p>
-					<div class="subseccion oculto">
-						<table border="0">
-							<tbody>
-								<tr>
-									<td>Marca «Sí» si te presentas al Cuerpo de Profesores de Música y Artes Escénicas, o a la especialidad de Música en Secundaria, y has obtenido algún premio en certámenes musicales de ámbito autonómico, nacional o internacional.</td>
-									<td style="width: 150px; padding: 10px;" rowspan="2" align="right" valign="bottom">Puntos 3.2: <input type="text" name="result320" value="0" readonly="readonly" size="4"></td>
-								</tr>
-							</tbody>
-						</table>
-						<div class="enlacesinfo">
-							<a class="toggleinfo" rel="val">Valoración</a><a class="toggleinfo" rel="doe">Más información</a>
-							<div class="info infoval">
-								<p>3.2.- Exclusivamente para el Cuerpo de Profesores de Música y Artes Escénicas y la especialidad de Música del Cuerpo de Profesores de Enseñanza Secundaria.</p>
-								<p>Por premios en certámenes musicales de ámbito autonómico, nacional o internacional: <strong>0,300 puntos</strong>.</p>
-							</div>
-							<div class="info infodoe">
-								<p><strong style="color: #000; font-size: 1.2em;">Documentos justificativos</strong></p>
-								<p>Documento que acredite haber recibido el premio emitido por el órgano competente.</p>
-							</div>
-						</div>
-					</div>
-					<!-- ###### Subsección 3.3 ##### //-->
-					<h3><span class="numseccion">3.3.</span> Deportistas de Alto Nivel</h3>
-					<!-- ## pregunta 3.3 ## //-->
-					<p class="pregunta"><span class="opcionesradio"><input class="optsino optsinodirecto" type="radio" name="opti330" value="1"> Sí<input class="optsino optsinodirecto" type="radio" name="opti330" value="0" checked="checked"> No</span><span class="numseccion">3.3.</span> ¿Te presentas a Educación Física de Secundaria y tienes la calificación de “Deportista de alto nivel”?</p>
-					<div class="subseccion oculto">
-						<table border="0">
-							<tbody>
-								<tr>
-									<td>Marca «Sí» si te presentas a la especialidad de Educación Física en Secundaria, y tienes la calificación de “Deportista de alto nivel”.</td>
-									<td style="width: 150px; padding: 10px;" rowspan="2" align="right" valign="bottom">Puntos 3.3: <input type="text" name="result330" value="0" readonly="readonly" size="4"></td>
-								</tr>
-							</tbody>
-						</table>
-						<div class="enlacesinfo">
-							<a class="toggleinfo" rel="val">Valoración</a><a class="toggleinfo" rel="doe">Más información</a>
-							<div class="info infoval">
-								<p>3.3.- Exclusivamente para la especialidad de Educación Física del Cuerpo de Profesores de Enseñanza Secundaria.</p>
-								<p>Por tener la calificación de “Deportista de Alto Nivel” según el Real Decreto 1467/1997, de 19 de septiembre: <strong>0,400 puntos</strong>.</p>
-							</div>
-							<div class="info infodoe">
-								<p><strong style="color: #000; font-size: 1.2em;">Documentos justificativos</strong></p>
-								<p>Certificación del organismo competente en el que expresamente conste la calificación de “Deportista de Alto Nivel”.</p>
-							</div>
-						</div>
-					</div>
-				</div>
-				<h2 id="puntuaciontotal"><span class="totalsec"><input class="maxsec" type="text" name="maxtotal" value="[Máx]" readonly="readonly" size="4"><input class="txttotal" type="text" name="restotal" value="0" readonly="readonly" size="4"> puntos</span><span class="numseccion">Puntuación total</span> <span class="txtmax">[Máx:10&nbsp;ptos]</span></h2>
+	<head>
+		<title>Calculadora Baremo Interinidades Docentes Extremadura 2022 - UGT SP Extremadura
+			Enseñanza
+		</title>
+		<meta charset="utf-8" />
+		<link rel="icon" href="https://extremadura.fespugt.es/images/IMAGEN/FOTOS/ENSENANZA/favicon.png" type="image/png">
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+		<link rel="stylesheet" href="style.css">
+		<script src="script.js"></script>
+	</head>
+	<body>
+		<div id="contenedor">
+			<div id="papel">
+				<img id="logo" src="https://extremadura.fespugt.es/images/IMAGEN/FOTOS/ENSENANZA/logo-ugtsp-invert.png"
+					alt="UGT SP Extremadura Enseñanza">
+				<p><span style="font-size:0.8em;">Interinidades Docentes Extremadura 2022</span></br><strong>Calculadora
+					de Baremo</strong>
+				</p>
+				<img id="imgpapel" src="https://extremadura.fespugt.es/images/IMAGEN/FOTOS/ENSENANZA/papel-rasgado.png">
 			</div>
-			<!--<div class="anotacion" style="margin: 3px 20px 1em 20px;">
-				<p><br>NOTA: La documentación justificativa indicada deberá ser aportada durante la cumplimentación de la solicitud de participación de forma electrónica en formato digital (PDF) (Base 5.3). Posteriormente los aspirantes seleccionados deberán proceder a su presentación mediante originales en formato papel de los mismos (Base XVI).</p>
-			</div>//-->
-
-            <div id="imprimircalcubaremo" style="text-align: center;"><input
-                    style="width: 20em; font-size: 1.2em; margin-top: 1em; padding: 8px;" onclick="window.print();"
-                    type="button" name="imprimir" value="Imprimir"></div>
-        </div>
-    </div>
-</body>
-
+			<div id="papelprnt">
+				<img id="logo" src="https://extremadura.fespugt.es/images/IMAGEN/FOTOS/ENSENANZA/logo-fesp.png"
+					alt="FeSP-UGT Extremadura Enseñanza">
+				<p><span style="font-size:0.8em;">Interinidades Docentes Extremadura 2022</span></br><strong>Calculadora
+					de Baremo</strong>
+				</p>
+			</div>
+			<div id="calculadora">
+				<p id="enlaceconv" style="font-size: small; font-weight: bold; font-variant: small-caps; color: #ffffff; background-color: #999999; text-align: center; padding: 5px;">
+					<a href="https://extremadura.fespugt.es/sectores/ensenanza/noticia/6359-ugtensenanza-convocados-los-procedimientos-de-oposiciones-e-interinidades-docentes-2022" style="color: #ffffff;" target="_blank">Puedes consultar aquí el texto de la convocatoria, y otra información de interés</a></p>
+				<div id="calcubaremo">
+					<div class="seccion">
+						<h2><span class="totalsec"><input class="maxsec" type="text" name="maxsec1" value="[Máx]" readonly="readonly" size="4"><input class="inputtotalsec" type="text" name="totalsec1" value="0" readonly="readonly" size="4"> puntos</span><span class="numseccion">1.</span> Experiencia docente <span class="txtmax">[Máx: 4,750 ptos]</span></h2>
+						<p class="pregunta"><span class="opcionesradio"><input class="optsino" type="radio" name="opti110" value="1"> Sí<input class="optsino" type="radio" name="opti110" value="0" checked="checked"> No</span><span class="numseccion">1.1.</span> ¿Experiencia docente en centros públicos, en la misma especialidad y nivel educativo?</p>
+						<div class="subseccion oculto">
+							<table border="0">
+								<tbody>
+									<tr>
+										<td>Indica tu tiempo de experiencia docente, del mismo nivel educativo y de la misma especialidad a la que optas, en centros educativos públicos:</td>
+										<td class="celdapunt" style="width: 150px; padding: 10px;" rowspan="2" align="right"><em class="txtmax2">[Máx: 4,750 ptos]</em><br>Puntos 1.1: <input type="text" name="result110" value="0" readonly="readonly" size="4"></td>
+									</tr>
+									<tr>
+										<td style="padding: 10px;">Meses: <input class="intronum" type="text" name="data110x" value="0" size="3" maxlength="3">&nbsp;&nbsp;&nbsp;&nbsp;Días: <input class="intronum dias" type="text" name="data110y" value="0" size="3" maxlength="2"></td>
+									</tr>
+								</tbody>
+							</table>
+							<div class="enlacesinfo">
+								<a class="toggleinfo" rel="doe">Más información</a>
+								<div class="info infodoe">
+									<p>1.1. Por la experiencia docente del mismo nivel educativo y de la misma especialidad en centros educativos públicos hasta un máximo de 4,750 puntos: 0,0395 puntos por mes trabajado.</p>
+									<p>Los periodos inferiores a un mes se computarán con 0,0013 puntos por día trabajado.</p>
+									<p>Se entenderá por centros educativos públicos, los integrados en la red pública de centros creados y sostenidos por las Administraciones Educativas.</p>
+									<p>Únicamente se tendrá en cuenta la experiencia docente en las enseñanzas regladas correspondientes a los niveles educativos no universitarios previstas en la Ley Orgánica 2/2006, de 3 de mayo, de Educación.</p>
+								</div>
+							</div>
+						</div>
+						<p class="pregunta"><span class="opcionesradio"><input class="optsino" type="radio" name="opti120" value="1"> Sí<input class="optsino" type="radio" name="opti120" value="0" checked="checked"> No</span><span class="numseccion">1.2.</span> ¿Experiencia docente en centros públicos, en distinta especialidad o nivel educativo?</p>
+						<div class="subseccion oculto">
+							<table border="0">
+								<tbody>
+									<tr>
+										<td>Indica tu tiempo de experiencia docente, de distinto nivel educativo o especialidad a la que optas, en centros educativos públicos:</td>
+										<td class="celdapunt" style="width: 150px; padding: 10px;" rowspan="2" align="right"><em class="txtmax2">[Máx: 2,375 ptos]</em><br>Puntos 1.2: <input type="text" name="result120" value="0" readonly="readonly" size="4"></td>
+									</tr>
+									<tr>
+										<td style="padding: 10px;">Meses: <input class="intronum" type="text" name="data120x" value="0" size="3" maxlength="3">&nbsp;&nbsp;&nbsp;&nbsp;Días: <input class="intronum dias" type="text" name="data120y" value="0" size="3" maxlength="2"></td>
+									</tr>
+								</tbody>
+							</table>
+							<div class="enlacesinfo">
+								<a class="toggleinfo" rel="doe">Más información</a>
+								<div class="info infodoe">
+									<p>1.2. Por la experiencia docente en otro nivel educativo u otra especialidad distinta a la que se opta, en centros educativos públicos, hasta un máximo de 2,375 puntos: 0,0197 puntos por mes trabajado.</p>
+									<p>Los periodos inferiores a un mes se computarán con 0,0006 puntos por día trabajado.</p>
+									<p>Se entenderá por centros educativos públicos, los integrados en la red pública de centros creados y sostenidos por las Administraciones Educativas.</p>
+									<p>Únicamente se tendrá en cuenta la experiencia docente en las enseñanzas regladas correspondientes a los niveles educativos no universitarios previstas en la Ley Orgánica 2/2006, de 3 de mayo, de Educación.</p>
+								</div>
+							</div>
+						</div>
+						<p class="pregunta"><span class="opcionesradio"><input class="optsino" type="radio" name="opti130" value="1"> Sí<input class="optsino" type="radio" name="opti130" value="0" checked="checked"> No</span><span class="numseccion">1.3.</span> ¿Experiencia docente en centros concertados, en la misma especialidad y nivel educativo?</p>
+						<div class="subseccion oculto">
+							<table border="0">
+								<tbody>
+									<tr>
+										<td>Indica tu tiempo de experiencia docente, del mismo nivel educativo y de la misma especialidad a la que optas, en centros concertados:</td>
+										<td class="celdapunt" style="width: 150px; padding: 10px;" rowspan="2" align="right"><em class="txtmax2">[Máx: 1,583 ptos]</em><br>Puntos 1.3: <input type="text" name="result130" value="0" readonly="readonly" size="4"></td>
+									</tr>
+									<tr>
+										<td style="padding: 10px;">Meses: <input class="intronum" type="text" name="data130x" value="0" size="3" maxlength="3">&nbsp;&nbsp;&nbsp;&nbsp;Días: <input class="intronum dias" type="text" name="data130y" value="0" size="3" maxlength="2"></td>
+									</tr>
+								</tbody>
+							</table>
+							<div class="enlacesinfo">
+								<a class="toggleinfo" rel="doe">Más información</a>
+								<div class="info infodoe">
+									<p>1.3. Por la experiencia docente en centros concertados del mismo nivel educativo y de la misma especialidad por la que se opta hasta un máximo de 1,583 puntos: 0,0131 puntos por mes trabajado.</p>
+									<p>Los periodos inferiores a un mes se computarán con 0,0004 puntos por día trabajado.</p>
+									<p>Únicamente se tendrá en cuenta la experiencia docente en las enseñanzas regladas correspondientes a los niveles educativos no universitarios previstas en la Ley Orgánica 2/2006, de 3 de mayo, de Educación.</p>
+								</div>
+							</div>
+						</div>
+						<p class="pregunta"><span class="opcionesradio"><input class="optsino" type="radio" name="opti140" value="1"> Sí<input class="optsino" type="radio" name="opti140" value="0" checked="checked"> No</span><span class="numseccion">1.4.</span> ¿Otra experiencia docente?</p>
+						<div class="subseccion oculto">
+							<table border="0">
+								<tbody>
+									<tr>
+										<td>Indica tu tiempo de experiencia docente en otras enseñanzas regladas de niveles no universitarios previstas en la LOE:</td>
+										<td class="celdapunt" style="width: 150px; padding: 10px;" rowspan="2" align="right"><em class="txtmax2">[Máx: 0,7915 ptos]</em><br>Puntos 1.4: <input type="text" name="result140" value="0" readonly="readonly" size="4"></td>
+									</tr>
+									<tr>
+										<td style="padding: 10px;">Meses: <input class="intronum" type="text" name="data140x" value="0" size="3" maxlength="3">&nbsp;&nbsp;&nbsp;&nbsp;Días: <input class="intronum dias" type="text" name="data140y" value="0" size="3" maxlength="2"></td>
+									</tr>
+								</tbody>
+							</table>
+							<div class="enlacesinfo">
+								<a class="toggleinfo" rel="doe">Más información</a>
+								<div class="info infodoe">
+									<p>1.4. Por la experiencia docente distinta de la recogida en los tres apartados anteriores hasta un máximo de 0,7915 puntos: 0,0065 puntos por mes trabajado.</p>
+									<p>Los periodos inferiores a un mes se computarán con 0,0002 puntos por día trabajado.</p>
+									<p>Únicamente se tendrá en cuenta la experiencia docente en las enseñanzas regladas correspondientes a los niveles educativos no universitarios previstas en la Ley Orgánica 2/2006, de 3 de mayo, de Educación.</p>
+								</div>
+							</div>
+						</div>
+						<div class="seccion">
+							<h2><span class="totalsec"><input class="maxsec" type="text" name="maxsec2" value="[Máx]" readonly="readonly" size="4"><input class="inputtotalsec" type="text" name="totalsec2" value="0" readonly="readonly" size="4"> puntos</span><span class="numseccion">2.</span> Resultados de oposición <span class="txtmax">[Máx: 3 ptos]</span></h2>
+							<p class="pregunta"><span class="opcionesradio"><input class="optsino" type="radio" name="opti200" value="1"> Sí<input class="optsino" type="radio" name="opti200" value="0" checked="checked"> No</span><span class="numseccion">2.</span> ¿Has participado en oposiciones a la misma especialidad?</p>
+							<div class="subseccion oculto">
+								<table border="0">
+									<tbody>
+										<tr>
+											<td>Indica la mejor nota media que hayas obtenido en oposiciones de la misma especialidad a la que optas, en Extremadura o en otras comunidades, así como el número de veces que has superado la fase de oposición:</td>
+											<td class="celdapunt" style="width: 150px; padding: 10px;" rowspan="2" align="right"><em class="txtmax2">[Máx: 3 ptos]</em><br>Puntos 2: <input type="text" name="result200" value="0" readonly="readonly" size="4"></td>
+										</tr>
+										<tr>
+											<td style="padding: 10px;">Mejor nota: <input class="intronum max10" type="text" style="margin-bottom:5px" name="data200x" value="0" size="7" maxlength="7"><br>Nº de aprobados: <input class="intronum" type="text" name="data200y" value="0" size="3" maxlength="1"></td>
+										</tr>
+									</tbody>
+								</table>
+								<div class="enlacesinfo">
+									<a class="toggleinfo" rel="doe">Más información</a>
+									<div class="info infodoe">
+										<p>2. Resultado de oposición. Hasta un máximo de 3 puntos.</p>
+										<p>Se valorará el mejor resultado obtenido en la misma especialidad a la que se opta en los procesos selectivos convocados por la Comunidad Autónoma de Extremadura o por otras Administraciones Educativas, de conformidad con lo establecido en el artículo 4.1.</p>
+										<p>La ponderación de la nota media se realizará mediante la siguiente fórmula:</p>
+										<p>Nota media x 0,30 + 0,3 x número de veces que se ha superado la fase de oposición (máximo 0,9) de los procesos selectivos para ingreso en ese cuerpo y especialidad.</p>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="seccion">
+							<h2><span class="totalsec"><input class="maxsec" type="text" name="maxsec3" value="[Máx]" readonly="readonly" size="4"><input class="inputtotalsec" type="text" name="totalsec3" value="0" readonly="readonly" size="4"> puntos</span><span class="numseccion">3.</span> Otros méritos <span class="txtmax">[Máx: 2,250 ptos]</span></h2>
+							<p class="pregunta"><span class="opcionesradio"><input class="optsino" type="radio" name="opti310" value="1"> Sí<input class="optsino" type="radio" name="opti310" value="0" checked="checked"> No</span><span class="numseccion">3.1.</span> ¿Valorar el expediente académico?</p>
+							<div class="subseccion oculto">
+								<table border="0">
+									<tbody>
+										<tr>
+											<td>Introduce aquí la nota media de tu expediente académico en los estudios que presentas como requisito de acceso:</td>
+											<td class="celdapunt" style="width: 150px; padding: 10px;" rowspan="2" align="right"><em class="txtmax2">[Máx: 0,600 ptos]</em><br>Puntos 3.1: <input type="text" name="result310" value="0" readonly="readonly" size="4"></td>
+										</tr>
+										<tr>
+											<td style="padding: 10px;">Nota media: <input class="intronum max10" type="text" name="data310x" value="0" size="7" maxlength="7"></td>
+										</tr>
+									</tbody>
+								</table>
+								<div class="enlacesinfo">
+									<a class="toggleinfo" rel="doe">Más información</a>
+									<div class="info infodoe">
+										<p>3.1. Expediente académico: Hasta un máximo de 0,60 puntos, de acuerdo con la siguiente fórmula (Nota media - 5) x 0,12.</p>
+									</div>
+								</div>
+							</div>
+							<p class="pregunta"><span class="opcionesradio"><input class="optsino" type="radio" name="opti320" value="1"> Sí<input class="optsino" type="radio" name="opti320" value="0" checked="checked"> No</span><span class="numseccion">3.2.</span> ¿Valorar otras titulaciones?</p>
+							<div class="subseccion oculto">
+								<table border="0">
+									<tbody>
+										<tr>
+											<td>Señala en este apartado otras titulaciones distintas de las requeridas para el acceso a la especialidad que solicitas:</td>
+											<td class="celdapunt" style="width: 150px; padding: 10px;" rowspan="2" align="right"><em class="txtmax2">[Máx: 0,750 ptos]</em><br>Puntos 3.2: <input type="text" name="result320" value="0" readonly="readonly" size="4"></td>
+										</tr>
+										<tr>
+											<td style="padding: 10px;">
+												<p><strong>Doctorado y premios extraordinarios:</strong></p>
+												<table class="tablaespaciada" style="width: 100%; border: 0">
+													<tbody>
+														<tr>
+															<td>¿Posees el Certificado de Estudios Avanzados, Suficiencia investigadora o equivalente?</td>
+															<td style="white-space:nowrap"><input type="radio" name="data320a" value="1"> Sí<input class="optsino" type="radio" name="data320a" value="0" checked="checked"> No</td>
+														</tr>
+														<tr>
+															<td>¿Tienes el título de Doctor?</td>
+															<td style="white-space:nowrap"><input type="radio" name="data320b" value="1"> Sí<input class="optsino" type="radio" name="data320b" value="0" checked="checked"> No</td>
+														</tr>
+														<tr>
+															<td>¿Has obtenido el premio extraordinario de doctorado?</td>
+															<td style="white-space:nowrap"><input type="radio" name="data320c" value="1"> Sí<input class="optsino" type="radio" name="data320c" value="0" checked="checked"> No</td>
+														</tr>
+													</tbody>
+												</table>
+												<p><strong>Otras titulaciones universitarias:</strong></p>
+												<p>Indica aquí otras titulaciones universitarias de carácter oficial distintas de las requeridas para el acceso a la especialidad que solicitas:</p>
+												<table class="tablaespaciada" style="width: 100%; border: 0;">
+													<tbody>
+														<tr>
+															<td>Títulos de primer ciclo (Diplomaturas, Ingeniería o Arquitectura Técnica o equivalentes, o estudios conducentes al primer ciclo de Licenciatura, Arquitectura o Ingeniería):</td>
+															<td><input class="intronum" type="text" name="data320d" value="0" size="3" maxlength="1"></td>
+														</tr>
+														<tr>
+															<td>Títulos de segundo ciclo (estudios correspondientes al segundo ciclo de Licenciaturas, Ingenierías, Arquitectura o equivalentes):</td>
+															<td><input class="intronum" type="text" name="data320e" value="0" size="3" maxlength="1"></td>
+														</tr>
+														<tr>
+															<td>Títulos de Grado:</td>
+															<td><input class="intronum" type="text" name="data320f" value="0" size="3" maxlength="1"></td>
+														</tr>
+														<tr>
+															<td>Títulos oficiales de Máster:</td>
+															<td><input class="intronum" type="text" name="data320g" value="0" size="3" maxlength="1"></td>
+														</tr>
+													</tbody>
+												</table>
+												<p><strong>Otras enseñanzas:</strong></p>
+												<table class="tablaespaciada" style="width: 100%; border: 0;">
+													<tbody>
+														<tr>
+															<td>Certificados de idiomas nivel C2:</td>
+															<td><input class="intronum" type="text" name="data320h" value="0" size="3" maxlength="1"></td>
+														</tr>
+														<tr>
+															<td>Certificados de idiomas nivel C1:</td>
+															<td><input class="intronum" type="text" name="data320i" value="0" size="3" maxlength="1"></td>
+														</tr>
+														<tr>
+															<td>Certificados de idiomas nivel B2:</td>
+															<td><input class="intronum" type="text" name="data320j" value="0" size="3" maxlength="1"></td>
+														</tr>
+														<tr>
+															<td>Certificados de idiomas nivel B1:</td>
+															<td><input class="intronum" type="text" name="data320k" value="0" size="3" maxlength="1"></td>
+														</tr>
+														<tr>
+															<td>Títulos de Técnico Superior de Formación Profesional o de Artes Plásticas y Diseño, de Técnico Deportivo Superior o Títulos Profesionales de Música o Danza, o equivalentes:</td>
+															<td><input class="intronum" type="text" name="data320l" value="0" size="3" maxlength="1"></td>
+														</tr>
+													</tbody>
+												</table>
+											</td>
+										</tr>
+									</tbody>
+								</table>
+								<div class="enlacesinfo">
+									<a class="toggleinfo" rel="doe">Más información</a>
+									<div class="info infodoe">
+										<p>3.2. Otras titulaciones distintas de las requeridas para el acceso a la especialidad que se solicita, hasta un máximo de 0,750 puntos.</p>
+										<p>3.2.1. Doctorado y premios extraordinarios.</p>
+										<p style="padding-left: 30px;">a) Por el Certificado-Diploma acreditativo de Estudios Avanzados, Suficiencia investigadora o cualquier otro título equivalente, siempre que no sean requisito para el ingreso en la función pública docente: 0,375 puntos.</p>
+										<p style="padding-left: 30px;">No se valorará este mérito cuando haya sido alegado el título de Doctor.</p>
+										<p style="padding-left: 30px;">b) Por poseer el título de doctor: 0,500 puntos.</p>
+										<p style="padding-left: 30px;">c) Por haber obtenido premio extraordinario en el doctorado: 0,100 puntos.</p>
+										<p>3.2.2. Otras titulaciones universitarias de carácter oficial:</p>
+										<p style="padding-left: 30px;">a) Por cada Diplomatura, Ingeniería Técnica, Arquitectura Técnica o títulos declarados legalmente equivalentes y por los estudios conducentes al primer ciclo de una Licenciatura, Arquitectura o Ingeniería: 0,375 puntos.</p>
+										<p style="padding-left: 30px;">b) Por los estudios correspondientes al segundo ciclo de Licenciaturas, Ingenierías, Arquitecturas o títulos declarados legalmente equivalentes: 0,375 puntos.</p>
+										<p style="padding-left: 30px;">En el caso de titulaciones de primer ciclo, no se valorarán a las personas aspirantes a especialidades de los Cuerpos de Profesores Técnicos de Formación Profesional y Maestros de Taller de Artes Plásticas y Diseño, en ningún caso, el primer título o estudios de esta naturaleza que presente la persona aspirante.</p>
+										<p style="padding-left: 30px;">En el caso de las personas aspirantes a especialidades de los Cuerpos de Profesores de Enseñanza Secundaria, Profesores de Escuelas Oficiales de Idiomas, Profesores de Música y Artes Escénicas y Profesores de Artes Plásticas y Diseño, tampoco se valorará el título o estudios de esta naturaleza que haya sido necesario superar para la obtención del título de Licenciado, Ingeniero o Arquitectura que presente la persona aspirante como requisito específico.</p>
+										<p style="padding-left: 30px;">c) Por cada título de Grado: 0,375 puntos.</p>
+										<p style="padding-left: 30px;">d) Por cada título oficial de Máster: 0,375 puntos.</p>
+										<p>3.2.3. Por titulaciones de otras enseñanzas.</p>
+										<p style="padding-left: 30px;">a) Por cada certificado de nivel del Consejo de Europa de Escuelas Oficiales de Idiomas:</p>
+										<p style="padding-left: 60px;">B1: 0,125 puntos.</p>
+										<p style="padding-left: 60px;">B2: 0,250 puntos.</p>
+										<p style="padding-left: 60px;">C1: 0,375 puntos.</p>
+										<p style="padding-left: 60px;">C2: 0,500 puntos.</p>
+										<p style="padding-left: 60px;">Cuando la persona participantes presente varios certificados del mismo idioma, solo se tendrá en cuenta el de nivel superior que presente.</p>
+										<p style="padding-left: 30px;">b) Por cada título profesional de Música o Danza: 0,125 puntos.</p>
+										<p style="padding-left: 30px;">c) Por cada título de Técnico Superior en Artes Plásticas y Diseño: 0,125 puntos.</p>
+										<p style="padding-left: 30px;">d) Por cada título de Técnico Superior de Formación Profesional o equivalente: 0,125 puntos.</p>
+										<p style="padding-left: 30px;">e) Por cada título de Técnico Deportivo Superior: 0,125 puntos.</p>
+									</div>
+								</div>
+							</div>
+							<p class="pregunta"><span class="opcionesradio"><input class="optsino" type="radio" name="opti330" value="1"> Sí<input class="optsino" type="radio" name="opti330" value="0" checked="checked"> No</span><span class="numseccion">3.3.</span> ¿Valorar formación permanente?</p>
+							<div class="subseccion oculto">
+								<table border="0">
+									<tbody>
+										<tr>
+											<td>Indica el número total de créditos en cursos, seminarios, grupos de trabajo u otras actividades formativas homologadas que hayas realizado:</td>
+											<td class="celdapunt" style="width: 150px; padding: 10px;" rowspan="3" align="right"><em class="txtmax2">[Máx: 1 pto]</em><br>Puntos 3.3: <input type="text" name="result330" value="0" readonly="readonly" size="4"></td>
+										</tr>
+										<tr>
+											<td style="padding: 10px;">Créditos: <input class="intronum" type="text" name="data330x" value="0" size="5" maxlength="5"></td>
+										</tr>
+										<tr>
+											<td style="padding: 10px;"><em><u>Atención:</u> puedes obtener, además, en este apartado, hasta un máximo de 0,4 puntos por publicaciones o películas de carácter didáctico y científico, a juicio de la Comisión de baremación, siempre con un máximo total de 1 punto.</em></td>
+										</tr>
+									</tbody>
+								</table>
+								<div class="enlacesinfo">
+									<a class="toggleinfo" rel="doe">Más información</a>
+									<div class="info infodoe">
+										<p>3.3. Formación permanente: Hasta un máximo de 1 punto.</p>
+										<p>3.3.1. Por cursos, seminarios, grupos de trabajo u otras actividades de formación realizadas: 0,02 puntos por cada crédito.</p>
+										<p>Se valorarán exclusivamente las actividades homologadas por una Administración Educativa y las de la Universidad.</p>
+										<p>3.3.2. Por publicaciones o películas de carácter didáctico y científico: hasta un máximo de 0,4 puntos.</p>
+										<p>Aquellas publicaciones que, estando obligadas a consignar el ISBN en virtud de lo dispuesto por el Decreto 2984/1972, de 2 de noviembre, modificado por el Real Decreto 2063/2008, de 12 de diciembre o, en su caso, ISSN o ISMN, carezcan de ellos, no serán valoradas. Tampoco se valorarán las publicaciones en las que la persona autora sea editora de las mismas.</p>
+										<p>La puntuación máxima se repartirá de la siguiente manera:<br>• Libro completo o publicación en vídeo o C.D. con autoría única: 0,2 puntos.<br>• Libro completo o publicación en vídeo o C.D. con autoría compartida se dividirá 0,2 puntos entre el número de personas entre las que se comparta la autoría, con un mínimo de 0,05 puntos.<br>• Artículos: 0,05 puntos con autoría única. Con autoría compartida se divide 0,05 puntos por el número de personas que compartan la autoría, con un mínimo de 0,02 puntos.</p>
+									</div>
+								</div>
+							</div>
+							<p class="pregunta"><span class="opcionesradio"><input class="optsino" type="radio" name="opti340" value="1"> Sí<input class="optsino" type="radio" name="opti340" value="0" checked="checked"> No</span><span class="numseccion">3.4.</span> ¿Valorar conocimiento de la realidad extremeña?</p>
+							<div class="subseccion oculto">
+								<table border="0">
+									<tbody>
+										<tr>
+											<td>Indica el tiempo de participación en acciones formativas relacionadas o desarrolladas en Extremadura, no alegadas en apartados anteriores:</td>
+											<td class="celdapunt" style="width: 150px; padding: 10px;" rowspan="4" align="right"><em class="txtmax2">[Máx: 1 pto]</em><br>Puntos 3.4: <input type="text" name="result340" value="0" readonly="readonly" size="4"></td>
+										</tr>
+										<tr>
+											<td style="padding: 10px;">Meses: <input class="intronum" type="text" name="data340a" value="0" size="3" maxlength="3">&nbsp;&nbsp;&nbsp;&nbsp;Días: <input class="intronum dias" type="text" name="data340b" value="0" size="3" maxlength="2"></td>
+										</tr>
+										<tr>
+											<td>Indica el tiempo de desempeño de tutoría, coordinación de ciclo o nivel, coordinación TIC, jefatura de departamento u otros cargos en centros docentes públicos de Extremadura:</td>
+										</tr>
+										<tr>
+											<td style="padding: 10px;">Meses: <input class="intronum" type="text" name="data340c" value="0" size="3" maxlength="3">&nbsp;&nbsp;&nbsp;&nbsp;Días: <input class="intronum dias" type="text" name="data340d" value="0" size="3" maxlength="2"></td>
+										</tr>
+									</tbody>
+								</table>
+								<div class="enlacesinfo">
+									<a class="toggleinfo" rel="doe">Más información</a>
+									<div class="info infodoe">
+										<p>3.4. Conocimiento de la realidad educativa extremeña: Hasta 1 punto.</p>
+										<p>3.4.1. Por la participación en acciones formativas relacionadas con Extremadura, actuaciones educativas en esta Comunidad o en planes formativos en Extremadura desarrollados por una Administración Educativa o la Universidad, distintos de la actividad lectiva ordinaria y de los méritos alegados en los apartados anteriores. Se valorará 0,090 por mes. Los periodos inferiores a un mes se computarán con 0,003 puntos por día.</p>
+										<p>3.4.2. Desempeño de tutoría, coordinación de ciclo o nivel, coordinación TIC, jefatura de departamento o cualquier otro cargo en centros docentes públicos de Extremadura. Se valorará 0,02 por mes. Los periodos inferiores a un mes se computarán con 0,0006 puntos por día.</p>
+									</div>
+								</div>
+							</div>
+							<p class="pregunta"><span class="opcionesradio"><input class="optsino" type="radio" name="opti350" value="1"> Sí<input class="optsino" type="radio" name="opti350" value="0" checked="checked"> No</span><span class="numseccion">3.5.</span> ¿Has realizado funciones consideradas como de difícil desempeño?</p>
+							<div class="subseccion oculto">
+								<table border="0">
+									<tbody>
+										<tr>
+											<td>Indica el tiempo en que has prestado servicios en centros de atención educativa preferente o de difícil desempeño, o en plazas de carácter itinerante, que itineren o de difícil cobertura:</td>
+											<td class="celdapunt" style="width: 150px; padding: 10px;" rowspan="2" align="right"><em class="txtmax2">[Máx: 0,750 ptos]</em><br>Puntos 3.5: <input type="text" name="result350" value="0" readonly="readonly" size="4"></td>
+										</tr>
+										<tr>
+											<td style="padding: 10px;">Meses: <input class="intronum" type="text" name="data350x" value="0" size="3" maxlength="3">&nbsp;&nbsp;&nbsp;&nbsp;Días: <input class="intronum dias" type="text" name="data350y" value="0" size="3" maxlength="2"></td>
+										</tr>
+									</tbody>
+								</table>
+								<div class="enlacesinfo">
+									<a class="toggleinfo" rel="doe">Más información</a>
+									<div class="info infodoe">
+										<p>3.5. Realización de funciones consideradas como de difícil desempeño. Hasta un máximo de 0,750 puntos. Se valorará 0,0312 por mes. Los periodos inferiores a un mes se computarán con 0,001 puntos por día.</p>
+										<p>Por tal se entiende los servicios prestados en:</p>
+										<p style="padding-left: 30px;">— Centros de atención educativa preferente o de difícil desempeño.</p>
+										<p style="padding-left: 30px;">— Plazas de carácter itinerante, que itineren o de difícil cobertura.</p>
+									</div>
+								</div>
+							</div>
+							<p class="pregunta"><span class="opcionesradio"><input class="optsino" type="radio" name="opti360" value="1"> Sí<input class="optsino" type="radio" name="opti360" value="0" checked="checked"> No</span><span class="numseccion">3.6.</span> ¿Has participado en proyectos de investigación e innovación educativa convocados por la Junta de Extremadura?</p>
+							<div class="subseccion oculto">
+								<table border="0">
+									<tbody>
+										<tr>
+											<td>Indica el tiempo en el que has participado, sin ser coordinador, en proyectos de investigación e innovación educativa convocados por la Consejería de Educación de la Junta de Extremadura:</td>
+											<td class="celdapunt" style="width: 150px; padding: 10px;" rowspan="4" align="right"><em class="txtmax2">[Máx: 0.750 ptos]</em><br>Puntos 3.6: <input type="text" name="result360" value="0" readonly="readonly" size="4"></td>
+										</tr>
+										<tr>
+											<td style="padding: 10px;">Meses: <input class="intronum" type="text" name="data360a" value="0" size="3" maxlength="3">&nbsp;&nbsp;&nbsp;&nbsp;Días: <input class="intronum dias" type="text" name="data360b" value="0" size="3" maxlength="2"></td>
+										</tr>
+										<tr>
+											<td>Indica el tiempo en el que has actuado como coordinador de proyectos de investigación e innovación educativa convocados por la Consejería de Educación de la Junta de Extremadura:</td>
+										</tr>
+										<tr>
+											<td style="padding: 10px;">Meses: <input class="intronum" type="text" name="data360c" value="0" size="3" maxlength="3">&nbsp;&nbsp;&nbsp;&nbsp;Días: <input class="intronum dias" type="text" name="data360d" value="0" size="3" maxlength="2"></td>
+										</tr>
+									</tbody>
+								</table>
+								<div class="enlacesinfo">
+									<a class="toggleinfo" rel="doe">Más información</a>
+									<div class="info infodoe">
+										<p>3.6. Por participación en proyectos de investigación o innovación educativa convocados por la Consejería de Educación y Empleo de la Junta de Extremadura. Hasta un máximo de 0,750 puntos.</p>
+										<p>3.6.1. Por cada participación: 0,0208 puntos por mes. Los periodos inferiores a un mes se computarán con 0,0007 puntos por día.</p>
+										<p>3.6.2. Por la coordinación: 0,0417 puntos por mes. Los periodos inferiores a un mes se computarán con 0,0014 puntos por día.</p>
+									</div>
+								</div>
+							</div>
+							<p class="pregunta"><span class="opcionesradio"><input class="optsino optsinodirecto" type="radio" name="opti370" value="1"> Sí<input class="optsino optsinodirecto" type="radio" name="opti370" value="0" checked="checked"> No</span><span class="numseccion">3.7.</span> ¿Tienes la calificación de Deportista de Alto Nivel o de Alto Rendimiento?</p>
+							<div class="subseccion oculto">
+								<table border="0">
+									<tbody>
+										<tr>
+											<td>Marca «Sí» si tienes la calificación de “Deportista de Alto Nivel” o de “Deportista de Alto de Rendimiento” de acuerdo con la normativa estatal o autonómica.</td>
+											<td class="celdapunt" style="width: 150px; padding: 10px;" rowspan="2" align="right">Puntos 3.7: <input type="text" name="result370" value="0" readonly="readonly" size="4"></td>
+										</tr>
+									</tbody>
+								</table>
+								<div class="enlacesinfo">
+									<a class="toggleinfo" rel="doe">Más información</a>
+									<div class="info infodoe">
+										<p>3.7. Por tener la calificación de “Deportista de Alto Nivel” o de “Deportista de Alto de Rendimiento” de acuerdo con la normativa estatal o autonómica: 0,100 puntos.</p>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<h2 id="puntuaciontotal">Puntuación total: <input type="text" name="restotal" value="0" readonly="readonly" size="4"> puntos</h2>
+				</div>
+			</div>
+			<!--<div class="anotacion" style="margin: 3px 20px 1em 20px; color:white;">
+				<p><br>NOTA: La documentación justificativa indicada deberá ser aportada durante la cumplimentación de la solicitud de participación de forma electrónica en formato digital (PDF) (Apartado 3 de la Base V).</p>
+				</div>//-->
+			<div id="imprimircalcubaremo" style="text-align: center;"><input
+				style="width: 20em; font-size: 1.2em; margin-top: 1em; padding: 8px;" onclick="window.print();"
+				type="button" name="imprimir" value="Imprimir"></div>
+		</div>
+	</body>
 </html>
